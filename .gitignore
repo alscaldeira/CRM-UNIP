@@ -1,0 +1,11 @@
+# Ignora tudo
+*
+
+# Não ignora qualquer arquivo com extensão
+!*.*
+
+# Não ignora qualquer diretório
+!*/
+
+# Ignora configurações de ide
+.vscode
