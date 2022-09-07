@@ -2,11 +2,7 @@
 
 Este projeto é um trabalho de faculdade. Ficará disponível para downlad em casos de estudo, uso e modificações de acordo com a licença MIT.
 
- ____                 _ 
-| __ )  __ _ _ __ ___(_)
-|  _ \ / _` | '__/ __| |
-| |_) | (_| | |  \__ \ |
-|____/ \__,_|_|  |___/_|
+![image](https://user-images.githubusercontent.com/52506164/188888619-eecc86c0-015a-490e-81b6-d3cb4a5ad4ed.png)
 
 ## Sobre o projeto
 
