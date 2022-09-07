@@ -118,6 +118,6 @@ Então tente procurar primeiro por uma solução no site [Stack Overflow](https:
 ### Estrutura do projeto
 
 O projeto está estruturado de uma forma muito simples.
-Existem arquivos responsáveis pela visualização das telas que estão na pasta view, arquivos responsáveis pelo tratamento de dados que estão na pasta controller e arquivos responsáveis pela transação de dados que estão na pasta model. :D
+Existem arquivos responsáveis pela visualização das telas que estão na pasta view, arquivos responsáveis pelo tratamento de dados que estão na pasta controller e arquivos responsáveis pela transação de dados que estão na pasta model.
 
 ![mvc](https://www.cybermedian.com/pt/wp-content/uploads/sites/11/2022/02/img_6212df40ef951.png "Exemplo de relacionamento entre model, view e controller")
