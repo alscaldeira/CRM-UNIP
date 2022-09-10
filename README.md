@@ -2,6 +2,8 @@
 
 Este projeto é um trabalho de faculdade. Ficará disponível para downlad em casos de estudo, uso e modificações de acordo com a licença MIT.
 
+![image](https://user-images.githubusercontent.com/52506164/188888619-eecc86c0-015a-490e-81b6-d3cb4a5ad4ed.png)
+
 ## Sobre o projeto
 
 Com base em uma empresa fictícia de investimentos, esse software vai servir tanto para os clientes quanto para os funcionários.

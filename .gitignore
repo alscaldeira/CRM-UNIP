@@ -9,3 +9,6 @@
 
 # Ignora configurações de ide
 .vscode
+
+# ignora arquivo exe
+*.exe
