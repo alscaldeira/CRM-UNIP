@@ -12,3 +12,4 @@
 
 # ignora arquivo exe
 *.exe
+*.o
