@@ -11,10 +11,10 @@ int main() {
     char loginsenha[15];
 
     printf("User: ");
-    scanf("%s", loginuser);
+    scanf("%s", &loginuser);
 
     printf("Senha: ");
-    scanf("%s", loginsenha);
+    scanf("%s", &loginsenha);
 
     // printf("%s %s", loginuser, loginsenha);
 
