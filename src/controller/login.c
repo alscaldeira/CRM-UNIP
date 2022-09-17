@@ -16,13 +16,10 @@ int main() {
     printf("Senha: ");
     scanf("%s", &loginsenha);
 
-    // printf("%s %s", loginuser, loginsenha);
-
     if(strcmp(user, loginuser) == 0 && strcmp(senha, loginsenha) == 0) {
         printf("acesso autorizado\n Bem Vindo a Barsi");
     } else {
         printf("acesso negado");
     }
-
 
 }
