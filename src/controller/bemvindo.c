@@ -10,6 +10,7 @@ int main() {
     printf("\t|____/ \\__,_|_|  |___/_|\n\n\n");
 
     int saida;
+    int cont = 0;
     int valido = 0;
     while(valido == 0){
         printf("------------------------------------------------------\n");
@@ -23,15 +24,20 @@ int main() {
         if(saida == 1 || saida ==2){
             valido++;
             break;
-        } else{
+        } else if(cont >= 3) {
+            printf("Limite de tentativas excedidas!");
+            return 0;
+        } else {
             printf("Opcao invalida, por favor digite uma opcao valida!\n");
-        }
+            cont++;
+        } 
+
     }
 
-        if(saida == 1) {
-            printf("bem vindo a sua conta");
-        } else {
-            printf("vamos realizar o seu cadastro");
-        }
+    if(saida == 1) {
+        printf("bem vindo a sua conta");
+    } else {
+        printf("vamos realizar o seu cadastro");
+    }
 
 }
