@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "stdio.h"
 
 void test(int* number) {
     *number = 6;
@@ -6,6 +6,7 @@ void test(int* number) {
 
 int main() {
     int number = 5;
+    printf("Testing this number: %d\n", number);
     test(&number);
     printf("Testing this number: %d\n", number);
     return 0;
