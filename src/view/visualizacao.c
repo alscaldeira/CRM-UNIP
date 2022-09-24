@@ -1,5 +1,4 @@
 #include "stdio.h"
-#include "locale.h"
 
 int menu(char msg[], char resp[][6]) {
     
@@ -10,7 +9,7 @@ int menu(char msg[], char resp[][6]) {
         printf("%s\n", msg);
 
         // Resgata o número de opções
-        int opcoes = sizeof(resp[0][0]);
+        int opcoes = sizeof(resp);
 
         printf("%d ---- %lu\n", opcoes, sizeof(resp[0]));
         int entrada;
@@ -34,10 +33,10 @@ int menu(char msg[], char resp[][6]) {
 
 int main() {
 
-    char msg[4] = { 'T', 'e', 's', 't' };
-    char resp[3][6] = { { 'r', 'e', 's', 'p', ' ', '1' },
-                        { 'r', 'e', 's', 'p', ' ', '2' },
-                        { 'r', 'e', 's', 'p', ' ', '3' }
+    char msg[4] = "Test";
+    char resp[3][6] = { "Resp 1",
+                        "Resp 2",
+                        "Resp 3"
                       };
     
     menu(msg, resp);
