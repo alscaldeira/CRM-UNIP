@@ -17,7 +17,7 @@ int main() {
     logo();
 
     int saida, cont;
-    for(cont = 0; cont <= 3; cont++) {
+    for(cont = 1; cont <= 3; cont++) {
         printf("------------------------------------------------------\n");
         printf("Voce ja e nosso cliente? Para realiza o login\n");
         printf("1 --- Login\n");
