@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
      printf("\t\tBem-vindo a\n");
@@ -11,20 +12,23 @@ int main() {
 
     int saida;
     int cont = 0;
-    int valido = 0;
-    while(valido == 0){
+    while(saida < 1 || saida > 2){
         printf("------------------------------------------------------\n");
         printf("Voce ja e nosso cliente? Para realiza o login\n");
         printf("1 --- Login\n");
         printf("Para fazer parte da Barsi crie sua conta\n");
         printf("2 --- Cadastro\n");
+        printf("Para sair do programa\n");
+        printf("3 --- Sair\n");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida == 1 || saida ==2){
-            valido++;
-            break;
-        } else if(cont >= 3) {
+        if(saida == 3){
+            printf("Volte sempre!!!");
+            return 0;
+        }
+
+        if(cont >= 3) {
             printf("Limite de tentativas excedidas!");
             return 0;
         } else {
@@ -35,9 +39,13 @@ int main() {
     }
 
     if(saida == 1) {
+        //Enviar para a tela de inicial
         printf("bem vindo a sua conta");
+        //login();
     } else {
-        printf("vamos realizar o seu cadastro");
+        //enviar para a tela de cadastro
+        printf("vamos realizar o seu cadastro\n");
+        //cadastro();
     }
 
 }
