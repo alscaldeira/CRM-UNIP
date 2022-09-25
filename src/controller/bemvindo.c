@@ -1,23 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void logo() {
-
-    printf("\t ____                 _ \n");
-    printf("\t| __ )  __ _ _ __ ___(_)\n");
-    printf("\t|  _ \\ / _` | '__/ __| |\n");
-    printf("\t| |_) | (_| | |  \\__ \\ |\n");
-    printf("\t|____/ \\__,_|_|  |___/_|\n\n\n");
-
-}
+#include ".\logo.c"
 
 int main() {
-    printf("\t\tBem-vindo a\n");
-
-    logo();
-
     int saida, cont;
     for(cont = 1; cont <= 3; cont++) {
+        system("cls");
+        printf("\t\tBem-vindo a\n");
+        logo();
         printf("------------------------------------------------------\n");
         printf("Voce ja e nosso cliente? Para realiza o login\n");
         printf("1 --- Login\n");
