@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include ".\logo.c"
 
 int main() {
 
@@ -10,9 +12,12 @@ int main() {
     char senha[15] = "1234";
     char loginsenha[15];
 
-
     for(int cont = 1; cont <= 3; cont++){
-        printf("Usuario: ");
+        system("cls");
+        logo();
+        
+        printf("\ntentativa %d de 3\n", cont);
+        printf("\nUsuario: ");
         scanf("%s", &loginuser);
 
         printf("Senha: ");
@@ -24,8 +29,9 @@ int main() {
             //telainicial();
             break;
         } else {
-            printf("acesso negado\n");
-        }
+            printf("\nAcesso negado\n");
+        } 
+
     }
 
 }
