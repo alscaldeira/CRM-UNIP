@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include ".\logo.c"
 
-int main() {
+void login() {
 
     logo();
 
@@ -52,5 +52,4 @@ int main() {
         printf("\nAcesso negado\n");
     }
 
-    return 0;
 }
