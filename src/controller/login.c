@@ -5,18 +5,21 @@
 
 int main() {
 
+    logo();
+
     //Essa página suscedará a página de bem-vindo do usuario
 
     char user[15] = "esc";
     char loginuser[15];
     char senha[15] = "1234";
     char loginsenha[15];
+    int permissao;
 
     for(int cont = 1; cont <= 3; cont++){
-        system("cls");
-        logo();
+        //system("cls");
         
-        printf("\ntentativa %d de 3\n", cont);
+        printf("\nTentativa %d de 3\n", cont);
+
         printf("\nUsuario: ");
         scanf("%s", &loginuser);
 
@@ -24,14 +27,30 @@ int main() {
         scanf("%s", &loginsenha);
 
         if(strcmp(user, loginuser) == 0 && strcmp(senha, loginsenha) == 0) {
-            //será direcionado para a tela inicial chamando a função
-            printf("acesso autorizado\n Bem Vindo a Barsi");
-            //telainicial();
+            permissao = 1;
             break;
-        } else {
-            printf("\nAcesso negado\n");
-        } 
+
+        } else if(strcmp(user, loginuser) != 0 && strcmp(senha, loginsenha) == 0){
+            printf("Usuario nao existe!!!!!\n");
+
+        } else if(strcmp(user, loginuser) == 0 && strcmp(senha, loginsenha) != 0){
+            printf("Senha incorreta!!!!!\n");
+
+        } else if(strcmp(user, loginuser) != 0 && strcmp(senha, loginsenha) != 0){
+            printf("Dados incorretos!!!!!\n");
+
+        }  
 
     }
 
+    if(permissao == 1){
+        //telainicial();
+        printf("Acesso autorizado\nBem Vindo a Barsi");
+        
+    } else {
+        system("cls");
+        printf("\nAcesso negado\n");
+    }
+
+    return 0;
 }
