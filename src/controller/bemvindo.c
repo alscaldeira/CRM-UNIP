@@ -15,6 +15,7 @@ int main() {
         printf("2 --- Cadastro\n");
         printf("Para sair do programa\n");
         printf("3 --- Sair\n");
+        printf("Digite uma opcao: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
         
