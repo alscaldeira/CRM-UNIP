@@ -41,6 +41,7 @@ int main() {
             break;
 
         case 3:
+            system("cls");
             printf("Obrigado volte sempre!");
             return 0;
 
