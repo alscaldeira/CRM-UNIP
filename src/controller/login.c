@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include ".\logo.c"
 
-int main() {
-
-    logo();
-
+void login() {
     //Essa página suscedará a página de bem-vindo do usuario
 
     char user[15] = "esc";
@@ -21,10 +17,10 @@ int main() {
         printf("\nTentativa %d de 3\n", cont);
 
         printf("\nUsuario: ");
-        scanf("%s", &loginuser);
+        scanf("%s", loginuser);
 
         printf("Senha: ");
-        scanf("%s", &loginsenha);
+        scanf("%s", loginsenha);
 
         if(strcmp(user, loginuser) == 0 && strcmp(senha, loginsenha) == 0) {
             permissao = 1;
@@ -51,6 +47,4 @@ int main() {
         system("cls");
         printf("\nAcesso negado\n");
     }
-
-    return 0;
 }

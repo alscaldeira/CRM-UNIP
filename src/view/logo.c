@@ -1,3 +1,5 @@
+#include "stdio.h"
+
 void logo() {
 
     printf("\t ____                 _ \n");
