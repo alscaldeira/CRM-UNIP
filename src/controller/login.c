@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+<<<<<<< HEAD
+=======
+#include ".\logo.c"
+
+void login() {
+
+    logo();
+>>>>>>> acbde99b7f9051abd7f19ab86444baa54742de9f
 
 void login() {
     //Essa página suscedará a página de bem-vindo do usuario
@@ -47,4 +55,8 @@ void login() {
         system("cls");
         printf("\nAcesso negado\n");
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> acbde99b7f9051abd7f19ab86444baa54742de9f
 }
