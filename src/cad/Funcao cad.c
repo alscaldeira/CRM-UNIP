@@ -1,111 +1,125 @@
-void cadastro ()
+void cadastro(void)
 
 {
-    //variaveis
-    char nome[100], end[100],sex[12],em[100],nac[20],uf[2],cid[30],civ[15];
-    int doc,num,year,op,op2;
+    // variaveis
+    char nome[100], end[100], sex[15], em[100], nac[20], uf[2], cid[30], civ[15], auxiliaCadastro[20];
+    int doc, num, year, op, op2;
     float nas;
 
-    //escopo do cadastro
+    // escopo do cadastro
     printf("Nome: ");
-    scanf("%s",nome);
+    scanf("%s", nome);
     printf("\nCPF: ");
-    scanf("%d",&doc);
+    scanf("%d", &doc);
     printf("\nData de nascimento ex((24.09)): ");
-    scanf("%f",&nas);
+    scanf("%f", &nas);
     printf("\nAno de nascimento: ");
     scanf("%f", &year);
-    printf ("\n Sexo: ");
+    printf("\n Sexo: ");
     printf("\n 1- Masculino");
     printf("\n 2- Feminino");
-    printf ("\n 3- Nao definir");
-    scanf("%d",&op);
+    printf("\n 3- Nao definir");
+    scanf("%d", &op);
 
     switch (op)
     {
     case 1:
-    sex = "Masculino";
+        strcpy(sex, "Masculino");
         break;
-    
+
     case 2:
-    sex = "Feminino";
+        strcpy(sex, "Feminino");
         break;
 
     case 3:
-    sex =  "Nao definir";
-        break;   
+        strcpy(sex, "Nao definir");
+        break;
     }
     printf("\nNacionalidade: ");
-    scanf("%s",nac);
+    scanf("%s", nac);
     printf("\nEstado((ex:SP,RJ)): ");
-    scanf("%s",uf);
+    scanf("%s", uf);
     printf("\nCidade: ");
-    scanf("%s",cid);
+    scanf("%s", cid);
     printf("\n Endereço: ");
-    scanf("%s",end);
+    scanf("%s", end);
     printf("\n Email:");
-    scanf("%s",em);
+    scanf("%s", em);
     printf("\nEstado civil: 1 - Casado/a");
     printf("\n2-Solteiro/a");
     printf("\n3-União estavel");
     printf("\n4-Vilvo/a");
-    scanf("%d",&op2);
+    scanf("%d", &op2);
 
     switch (op2)
     {
     case 1:
-    civ="Casado/a";
+        strcpy(civ, "Casado/a");
         break;
-    
+
     case 2:
-    civ="Solteiro/a";
+        strcpy(civ, "Solteiro/a");
         break;
 
     case 3:
-    civ="União estavel";
+        strcpy(civ, "União estavel");
         break;
 
     case 4:
-    civ="Vilvo/a";
-        break;        
+        strcpy(civ, "Viuvo/a");
+        ;
+        break;
     }
 
-    int dep, ndep,empre;
-    char prof[35],nempre[30];
-    float rend,bens;
+    int dep, ndep, empre;
+    char prof[35], nempre[30];
+    float rend, bens;
 
     printf("\nTem dependestes?");
     printf("\n1 - sim");
     printf("\nOutra tecla - nao");
-    scanf("%d",&dep);
+    scanf("%d", &dep);
 
-    if (dep ==  1){
+    if (dep == 1)
+    {
         printf("Quantos dependestes?");
-        scanf("%d",&ndep);
+        scanf("%d", &ndep);
     }
-    else{
-        ndep=null;
+    else
+    {
+        ndep = 0;
     }
     printf("\nQual é a sua profissão?");
-    scanf("%s",prof);
+    scanf("%s", prof);
     printf("\nEstá empregado no momento?");
     printf("\n1 - sim");
     printf("\nOutra tecla - nao");
-    scanf("%d",&empre);
+    scanf("%d", &empre);
 
-    if (empre == 1){
+    if (empre == 1)
+    {
         printf("\nQual o nome da empresa em que está empregado?");
-        scanf("%s",nempre);
+        scanf("%s", nempre);
     }
-    else{
-        nempre=null;
+    else
+    {
+        strcpy(nempre, "Desempregado/a");
     }
-    if(nempre!=null){
+    if (nempre != "Desempregado/a")
+    {
         printf("\nQual a sua renda mensal?");
-        scanf("%f",&rend);
+        scanf("%f", &rend);
     }
-    printf("\nQuanto em bens você possui: ");
+    printf("\nQuanto em bens você possui? ");
     scanf("%f", &bens);
+
+    strcpy(auxiliaCadastro, doc);
+    strcat(auxiliaCadastro, ".txt");
+
+    // Tentativa de salvar o cadastro em TXT
+    FILE *cadastroTXT;
+    cadastroTXT = fopen(auxiliaCadastro, "w");
+
+    fprintf(cadastroTXT, "ACEITA PELO AMOR DE DEUS.");
+    fclose(cadastroTXT);
 }
-
-
