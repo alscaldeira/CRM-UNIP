@@ -1,13 +1,18 @@
 #include <stdio.h>
 
-int main() {
+/* void perguntas(int qualnivel, int resultado){
 
-    int qualnivel, resultado;
     printf("pretende retirar seu dinheiro em quanto tempo?\n");
     printf("(1) ******\n (2) ******\n (3) *****\n (4) *****\n\n");
     printf("Escolha: ");
-    scanf("%d", &qualnivel);
-     
+    scanf("%d", &*qualnivel);
+
+
+}
+
+int main() {
+
+     perguntas(*qualnivel, *resultado);
 
     switch (qualnivel) {
 
@@ -29,10 +34,7 @@ int main() {
 
     }
 
-    printf("sabe o que esta fazendo?\n");
-    printf("(1) ******\n (2) ******\n (3) *****\n (4) *****\n\n");
-    printf("Escolha: ");
-    scanf("%d", &qualnivel);
+    perguntas();
 
     switch (qualnivel) {
 
@@ -55,16 +57,17 @@ int main() {
     }
 
     if(resultado <= 40){
-        printf("vc e conservador %d", resultado);
+        printf("vc e conservador ");
 
     } else if(resultado <= 60) {
-        printf("vc e moderado %d", resultado);
+        printf("vc e moderado");
 
     } else {
-        printf("vc e agressivo %d", resultado);
+        printf("vc e agressivo");
 
     }
     
 
 
-}
+} 
+*/

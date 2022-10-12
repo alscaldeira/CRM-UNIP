@@ -9,5 +9,14 @@ int main() {
     printf("| |_) | (_| | |  \\__ \\ |\n");
     printf("|____/ \\__,_|_|  |___/_|\n");
 
-    
+    char resposta;
+    printf("voce ja e nosso cliente digite [S/N]: \n");
+    scanf("%s", &resposta);
+
+    if(resposta == 'S') {
+        teladelogin();
+    } else {
+        cadastro();
+    }
+
 }
