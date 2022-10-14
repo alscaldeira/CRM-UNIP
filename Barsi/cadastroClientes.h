@@ -117,22 +117,16 @@ void cadastroClientes()
     printf("\nOutra tecla - nao\n");
     scanf("%d", &empregado);
 
-    if (empregado == 1)
-    {
+    if (empregado == 1){
         fflush(stdin);
         printf("\nQual o nome da empresa em que esta empregado?\n");
         scanf("%[^\n]", nomeEmprego);
-    }
-    else
-    {
+    } else {
         strcpy(nomeEmprego, "Desempregado/a");
     }
-    if (empregado != 1)
-    {
+    if (empregado != 1){
         renda=0.00;
-    }
-    else
-    {
+    } else {
         printf("\nQual a sua renda mensal\n");
         scanf("%f", &renda);
     }
