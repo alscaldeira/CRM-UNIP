@@ -13,5 +13,6 @@
 #include "sair.h"
 #include "cadastroClientes.h"
 #include "investidorNivel.h"
+#include "cadastroAnalista.h"
 
 #endif // MAINHEADER_H_INCLUDED

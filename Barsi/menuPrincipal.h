@@ -22,6 +22,7 @@ void menuPrincipal() {
         printf("2 --- Renda variavel\n");
         printf("3 --- Cadastro de cliente\n");
         printf("4 --- Perfil do investidor\n");
+        printf("5 --- Cadastrar novo colaborador\n");
         printf("9 --- Logout\n");
         printf("0 --- Sair\n");
         printf("Digite uma opcao: ");
@@ -61,6 +62,11 @@ void menuPrincipal() {
         case 4:
             printf("Realizar o perfil do investidor");
             investidorNivel();
+            break;
+
+        case 5:
+            printf("Cadastrar novo colaborador");
+            cadastroAnalista();
             break;
 
         case 9:
