@@ -5,6 +5,11 @@ void sair(){
 
     system("cls");
     printf("Obrigado volte sempre!\n\n\n\n");
+    //Carlos - Log registra saidas.
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
+    fprintf(logFile,"Sistema encerrado.");
+    fclose(logFile);
     printf("Digite uma tecla para sair..............");
     getch();
     return 0;

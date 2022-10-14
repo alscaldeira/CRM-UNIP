@@ -2,11 +2,18 @@
 #define INVESTIDORNIVEL_H_INCLUDED
 
 
-
 void investidorNivel() {
 
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
+    fprintf(logFile,"Iniciou o teste de perfil de investidor.\n");
+    fclose(logFile);
+
+    system("cls");
+    logo();
+
     int qualnivel = 0, resultado = 0;
-    printf("Com quais produtos abaixo voce tem familiaridade e/ou costuma investir com frequencia?\n");
+    printf("\n\nCom quais produtos abaixo voce tem familiaridade e/ou costuma investir com frequencia?\n");
     printf("(1) Nenhum.\n");
     printf("(2) Renda Fixa(CDBs, Teseuro, Fundos de RF, etc).\n");
     printf("(3) Renda Variavel(Acoes, Fiis, etc).\n");
@@ -122,12 +129,28 @@ void investidorNivel() {
 
     if(resultado <= 40){
         printf("vc e conservador %d", resultado);
+        //Carlos- acrescentei o log e fiz o retorno para o menu.
+        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo conservador.\n");
+        fclose(logFile);
+        getch();
+        menuPrincipal();
 
     } else if(resultado <= 60) {
         printf("vc e moderado %d", resultado);
+        //Carlos- acrescentei o log e fiz o retorno para o menu.
+        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo moderado.\n");
+        fclose(logFile);
+        getch();
+        menuPrincipal();
 
     } else {
         printf("vc e agressivo %d", resultado);
+        //Carlos- acrescentei o log e fiz o retorno para o menu.
+        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo agressivo.\n");
+        fclose(logFile);
+        getch();
+
+        menuPrincipal();
 
     }
 
