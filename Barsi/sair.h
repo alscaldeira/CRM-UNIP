@@ -8,7 +8,7 @@ void sair(){
     //Carlos - Log registra saidas.
     FILE *logFile;
     logFile=fopen("log.txt", "a");
-    fprintf(logFile,"Sistema encerrado.");
+    fprintf(logFile,"Sistema encerrado.\n");
     fclose(logFile);
     printf("Digite uma tecla para sair..............");
     getch();

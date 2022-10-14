@@ -22,14 +22,14 @@ void menuPrincipal() {
         printf("2 --- Renda variavel\n");
         printf("3 --- Cadastro de cliente\n");
         printf("4 --- Perfil do investidor\n");
-        printf("5 --- Cadastrar novo colaborador\n");
+        printf("5 --- Cadastrar novo analista\n");
         printf("9 --- Logout\n");
         printf("0 --- Sair\n");
         printf("Digite uma opcao: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida < 0 || saida <= 4 || saida == 9){
+        if(saida < 0 || saida <= 5 || saida == 9){
             break;
         } else {
             printf("Opcao invalida, por favor digite uma opcao valida!\n\n\n");
@@ -55,17 +55,14 @@ void menuPrincipal() {
             break;
 
         case 3:
-            printf("Bem vindo ao cadastro");
             cadastroClientes();
             break;
 
         case 4:
-            printf("Realizar o perfil do investidor");
             investidorNivel();
             break;
 
         case 5:
-            printf("Cadastrar novo colaborador");
             cadastroAnalista();
             break;
 

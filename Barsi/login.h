@@ -1,5 +1,6 @@
 #ifndef LOGIN_H_INCLUDED
 #define LOGIN_H_INCLUDED
+
 #define ENTER 13    // CÓDIGO ASCII DA TECLA ENTER
 #define BACKSPACE 8 // CÓDIGO ASCII DA TECLA BACKSPACE
 #define SPACE 32    // CÓDIGO ASCII DA TECLA BARRA DE ESPACO
@@ -11,9 +12,9 @@ void login() {
     //Essa página suscedará a página de bem-vindo do usuario
 
     char ch = '\0';
-    char user[15] = "Emerson";
+    char user[15] = "esc";
     char loginUser[15];
-    char senha[15] = "12345";
+    char senha[15] = "123";
     char loginSenha[15];
     int permissao = 0;
     int ctecla = 0;
@@ -32,7 +33,7 @@ void login() {
         scanf("%s", loginUser);
 
         printf("Senha: ");
-        while(ctecla < 5){
+        while(ctecla < 3){
 
             ch = getch();
 
@@ -94,7 +95,7 @@ void login() {
         //Carlos - Acrescentei o log.
         FILE *logFile;
         logFile=fopen("log.txt", "a");
-        fprintf(logFile,"Login realizado com sucesso.\n");
+        fprintf(logFile,"Login realizado com sucesso por %s.\n", loginUser);
         fclose(logFile);
         menuPrincipal();
 

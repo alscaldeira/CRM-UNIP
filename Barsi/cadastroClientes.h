@@ -6,9 +6,8 @@ void cadastroClientes()
     logFile=fopen("log.txt", "a");
     fprintf(logFile,"Iniciou o cadastro do cliente.\n");
         // variaveis
-    char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20], uf[2], cidade[30], estCivil[15];
-    int cpf, ano, op, op2; //op um está ligado ao sexo do cliente, já a opção dois o estado civil.
-    float nas;
+    char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20], uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30];
+    int op, op2; //op um está ligado ao sexo do cliente, já a opção dois o estado civil.
 
     int dependentes, numeroDependentes, empregado;
     char profissao[35], nomeEmprego[30];
@@ -29,24 +28,28 @@ void cadastroClientes()
 
     system("cls");
     logo();
-    // escopo do cadastro
+
+    //Dados pessoais
     fflush(stdin);
-    printf("\n\nNome: ");
+    printf("Nome: ");
     scanf("%[^\n]", nome);
-    printf("\nCPF(sem espacos e caracteres especiais): ");
-    scanf("%d", &cpf);
-    printf("\nData de nascimento ex(24.09): ");
-    scanf("%f", &nas);
-    printf("\nAno de nascimento: ");
-    scanf("%d", &ano);
-    printf("\n Sexo: ");
-    printf("\n 1- Masculino");
-    printf("\n 2- Feminino");
-    printf("\n 3- Nao definir\n");
+    fflush(stdin);
+    printf("CPF: ");
+    scanf("%[^\n]", cpf);
+    fflush(stdin);
+    printf("Data de nascimento ex(24/09/2022): ");
+    scanf("%[^\n]", nascimento);
+
+    //sexualidade
+    printf("\nSexo\n");
+    printf("1 -- Masculino\n");
+    printf("2 -- Feminino\n");
+    printf("3 -- Nao definir\n");
+    printf("Digite uma opcao valida: ");
     scanf("%d", &op);
 
-    switch (op)
-    {
+    switch (op){
+
     case 1:
         strcpy(sexo, "Masculino");
         break;
@@ -59,6 +62,7 @@ void cadastroClientes()
         strcpy(sexo, "Nao definir");
         break;
     }
+
     fflush(stdin);
     printf("\nNacionalidade: ");
     scanf("%[^\n]", nacionalidade);
@@ -70,16 +74,19 @@ void cadastroClientes()
     fflush(stdin);
     printf("\nEndereco: ");
     scanf("%[^\n]", endereco);
-    printf("\nEmail:");
+    printf("\nEmail: ");
     scanf("%s", email);
-    printf("\nEstado civil: 1 - Casado/a");
-    printf("\n2-Solteiro/a");
-    printf("\n3-Uniao estavel");
-    printf("\n4-Vilvo/a\n");
+
+    //estado cívil
+    printf("\nEstado civil: \n");
+    printf("1 -- Casado/a\n");
+    printf("2 -- Solteiro/a\n");
+    printf("3 -- Uniao estavel\n");
+    printf("4 -- Vilvo/a\n");
+    printf("Digite uma opcao valida: ");
     scanf("%d", &op2);
 
-    switch (op2)
-    {
+    switch (op2){
     case 1:
         strcpy(estCivil, "Casado/a");
         break;
@@ -100,32 +107,33 @@ void cadastroClientes()
 
 
     printf("\nTem dependestes?\n");
-    printf("\n1 - sim");
-    printf("\nOutra tecla - nao\n");
+    printf("1 -- sim\n");
+    printf("Outra tecla - nao\n");
+    printf("Digite uma opcao valida: ");
     scanf("%d", &dependentes);
 
-    if (dependentes == 1)
-    {
-        printf("Quantos dependestes?");
+    if (dependentes == 1){
+        printf("Numeros de dependestes: ");
         scanf("%d", &numeroDependentes);
     } else {
         numeroDependentes = 0;
     }
 
     fflush(stdin);
-    printf("\nQuanto em bens voce possui? \n");
+    printf("\nValor em bens que voce possui: ");
     scanf("%f", &bens);
     fflush(stdin);
-    printf("\nQual a sua profissao?\n");
+    printf("\nQual a sua profissao? ");
     scanf("%[^\n]", profissao);
-    printf("\nEsta empregado no momento?");
-    printf("\n1 - sim");
-    printf("\nOutra tecla - nao\n");
+    printf("\nEsta empregado no momento?\n");
+    printf("1 -- Sim\n");
+    printf("2 -- Nao\n");
+    printf("Digite uma opcao valida: ");
     scanf("%d", &empregado);
 
     if (empregado == 1){
         fflush(stdin);
-        printf("\nQual o nome da empresa em que esta empregado?\n");
+        printf("\nQual o nome da empresa em que esta empregado? ");
         scanf("%[^\n]", nomeEmprego);
     } else {
         strcpy(nomeEmprego, "Desempregado/a");
@@ -133,18 +141,18 @@ void cadastroClientes()
     if (empregado != 1){
         renda=0.00;
     } else {
-        printf("\nQual a sua renda mensal\n");
+        printf("\nQual a sua renda mensal: ");
         scanf("%f", &renda);
     }
 
 
 
-    fprintf(cadastroCLIENTES,"Nome:%s\nCPF:%d\nNascimento:%2.f.%d\nSexo:%s\nNacionalidade:%s\nUF:%s\nCidaded:%s",nome,cpf,nas,ano,sexo,nacionalidade,uf,cidade);
+    fprintf(cadastroCLIENTES,"Nome:%s\nCPF:%s\nNascimento:%s\nSexo:%s\nNacionalidade:%s\nUF:%s\nCidade:%s",nome,cpf,nascimento,sexo,nacionalidade,uf,cidade);
     fprintf(cadastroCLIENTES,"\nEndereco:%s\nEmail:%s\nEstado civil:%s\nNumero de dependetes:%d\nProfissão:%s\n",endereco,email,estCivil,numeroDependentes,profissao);
     fprintf(cadastroCLIENTES,"Nome da empresa atual:%s\nRenda Mensal:%2.f\nValor em bens:%2.f\n\n",nomeEmprego,renda,bens);
 
     fclose(cadastroCLIENTES);
-    printf ("\n\nCadastro realizado com sucesso");
+    printf ("\n\nCadastro realizado com sucesso!!");
     //Abertura do log para registrar o cadastro realizado. Carlos
     fprintf(logFile,"Cadastro de cliente realizado.\n");
     fclose(logFile);

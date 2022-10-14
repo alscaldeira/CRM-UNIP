@@ -111,3 +111,37 @@
 
 1665773429 d:\unip\pim 2º semestre\code\crm-unip\barsi\cadastroanalista.h
 
+1665787414 source:c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\main.c
+	"mainHeader.h"
+
+1665787553 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\mainheader.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"login.h"
+	"logo.h"
+	"telaInicial.h"
+	"menuPrincipal.h"
+	"sair.h"
+	"cadastroClientes.h"
+	"investidorNivel.h"
+	"cadastroAnalista.h"
+
+1665789769 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\login.h
+
+1665788262 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\logo.h
+
+1665787414 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\telainicial.h
+
+1665790106 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipal.h
+
+1665789981 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\sair.h
+
+1665789615 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroclientes.h
+
+1665787414 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\investidornivel.h
+
+1665787414 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroanalista.h
+

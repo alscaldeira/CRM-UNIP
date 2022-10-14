@@ -1,0 +1,32 @@
+Nome:Everthon Caldeira
+CPF:2147483392
+Nascimento:15.0
+Sexo:Masculino
+Nacionalidade:1
+UF:SP
+Cidaded:Sao Paulo
+Endereco:Rua Topazio, 20
+Email:everthoncaldeira2003@gmail.com
+Estado civil:Solteiro/a
+Numero de dependetes:0
+Profissão:Vendedor
+Nome da empresa atual:Joy
+Renda Mensal:5000
+Valor em bens: 2
+
+Nome:fsfs
+CPF:656565
+Nascimento:656565
+Sexo:Masculino
+Nacionalidade:brrt
+UF:gf
+Cidade:gfg
+Endereco:63
+Email:5556
+Estado civil:Solteiro/a
+Numero de dependetes:5
+Profissão:uuhuh
+Nome da empresa atual:hfhfhf
+Renda Mensal:5656656384
+Valor em bens:569898
+
