@@ -10,6 +10,12 @@ void menuPrincipal() {
 
         logo();
 
+        //Carlos - Registro de abertura de menu no LOG.
+        FILE *logFile;
+        logFile=fopen("log.txt", "a");
+        fprintf(logFile,"Menu principal aberto.\n");
+
+
         printf("Qual opcao deseja:\n");
         printf("------------------------------------------------------\n");
         printf("1 --- Renda fixa\n");
@@ -27,6 +33,11 @@ void menuPrincipal() {
         } else {
             printf("Opcao invalida, por favor digite uma opcao valida!\n\n\n");
             printf("Digite uma tecla para continuar.....");
+            //Carlos - Acrescentei o registro do log caso o usuário tenha digitado uma opção invalida.
+            FILE *logFile;
+            logFile=fopen("log.txt", "a");
+            fprintf(logFile,"Usuario digitou uma opção invalida.\n");
+            fclose(logFile);
             getch();
         }
     }
@@ -38,7 +49,7 @@ void menuPrincipal() {
             break;
 
         case 2:
-            printf("Bem vindo a opcao de renda fixa");
+            printf("Bem vindo a opcao de renda variavel");
             //rendaVariavel();
             break;
 
@@ -49,7 +60,7 @@ void menuPrincipal() {
 
         case 4:
             printf("Realizar o perfil do investidor");
-            //perfilInvestidor()
+            investidorNivel();
             break;
 
         case 9:

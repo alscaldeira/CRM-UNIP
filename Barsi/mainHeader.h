@@ -12,5 +12,6 @@
 #include "menuPrincipal.h"
 #include "sair.h"
 #include "cadastroClientes.h"
+#include "investidorNivel.h"
 
 #endif // MAINHEADER_H_INCLUDED

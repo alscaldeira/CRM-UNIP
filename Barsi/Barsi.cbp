@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="cadastroClientes.h" />
+		<Unit filename="investidorNivel.h" />
 		<Unit filename="login.h" />
 		<Unit filename="logo.h" />
 		<Unit filename="main.c">

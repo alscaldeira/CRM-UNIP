@@ -1,6 +1,6 @@
 #ifndef LOGIN_H_INCLUDED
 #define LOGIN_H_INCLUDED
-
+#include "abreLog.h"
 #define ENTER 13    // CÓDIGO ASCII DA TECLA ENTER
 #define BACKSPACE 8 // CÓDIGO ASCII DA TECLA BACKSPACE
 #define SPACE 32    // CÓDIGO ASCII DA TECLA BARRA DE ESPACO
@@ -92,9 +92,19 @@ void login() {
     }
 
     if(permissao == 1){
+        //Carlos - Acrescentei o log.
+        FILE *logFile;
+        logFile=fopen("log.txt", "a");
+        fprintf(logFile,"Login realizado com sucesso.\n");
+        fclose(logFile);
         menuPrincipal();
 
     } else {
+         //Carlos - Acrescentei o log.
+        FILE *logFile;
+        logFile=fopen("log.txt", "a");
+        fprintf(logFile,"Login recusado, limite de tentativas excedidas.\n");
+        fclose(logFile);
         sair();
     }
 

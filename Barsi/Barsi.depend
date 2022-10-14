@@ -46,7 +46,7 @@
 1665715570 source:d:\unip\pim 2º semestre\code\barsi\main.c
 	"mainHeader.h"
 
-1665716250 d:\unip\pim 2º semestre\code\barsi\mainheader.h
+1665753804 d:\unip\pim 2º semestre\code\barsi\mainheader.h
 	"windows.h"
 	<stdio.h>
 	<string.h>
@@ -58,16 +58,22 @@
 	"menuPrincipal.h"
 	"sair.h"
 	"cadastroClientes.h"
+	"investidorNivel.h"
 
-1665715846 d:\unip\pim 2º semestre\code\barsi\login.h
+1665752918 d:\unip\pim 2º semestre\code\barsi\login.h
+	"abreLog.h"
 
 1665612000 d:\unip\pim 2º semestre\code\barsi\logo.h
 
 1665610318 d:\unip\pim 2º semestre\code\barsi\telainicial.h
 
-1665716083 d:\unip\pim 2º semestre\code\barsi\menuprincipal.h
+1665754006 d:\unip\pim 2º semestre\code\barsi\menuprincipal.h
 
-1665602278 d:\unip\pim 2º semestre\code\barsi\sair.h
+1665753201 d:\unip\pim 2º semestre\code\barsi\sair.h
 
-1665716545 d:\unip\pim 2º semestre\code\barsi\cadastroclientes.h
+1665754006 d:\unip\pim 2º semestre\code\barsi\cadastroclientes.h
+
+1665753556 d:\unip\pim 2º semestre\code\barsi\abrelog.h
+
+1665754014 d:\unip\pim 2º semestre\code\barsi\investidornivel.h
 
