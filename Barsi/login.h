@@ -33,7 +33,6 @@ void login() {
         scanf("%s", loginUser);
 
         printf("Senha: ");
-        //scanf("%s", loginSenha);
         while(ctecla < 5){
 
             ch = getch();

@@ -14,7 +14,7 @@ void menuPrincipal() {
         printf("------------------------------------------------------\n");
         printf("1 --- Renda fixa\n");
         printf("2 --- Renda variavel\n");
-        printf("3 --- Cadastro\n");
+        printf("3 --- Cadastro de cliente\n");
         printf("4 --- Perfil do investidor\n");
         printf("9 --- Logout\n");
         printf("0 --- Sair\n");
@@ -44,11 +44,11 @@ void menuPrincipal() {
 
         case 3:
             printf("Bem vindo ao cadastro");
-            //cadastro()
+            cadastroClientes();
             break;
 
         case 4:
-            printf("Realizar o perfil do invesidor");
+            printf("Realizar o perfil do investidor");
             //perfilInvestidor()
             break;
 

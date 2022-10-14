@@ -1,0 +1,16 @@
+Nome:Carlos Eduardo de Sousa
+CPF:2147483392
+Nascimento:15.1999
+Sexo:Masculino
+Nacionalidade:Brasileiro
+UF:SP
+Cidaded:SÆo Paulo
+Endereco:Rua Jose Tartini 49
+Email:carloseduardo8683@gmail.com
+Estado civil:Solteiro/a
+Numero de dependetes:0
+Profissão:Analista de Sistemas
+Nome da empresa atual:2033
+Renda Mensal:2033
+Valor em bens:12000
+

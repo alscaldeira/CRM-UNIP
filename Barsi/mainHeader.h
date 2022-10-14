@@ -1,6 +1,7 @@
 #ifndef MAINHEADER_H_INCLUDED
 #define MAINHEADER_H_INCLUDED
 
+#include "windows.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -10,5 +11,6 @@
 #include "telaInicial.h"
 #include "menuPrincipal.h"
 #include "sair.h"
+#include "cadastroClientes.h"
 
 #endif // MAINHEADER_H_INCLUDED
