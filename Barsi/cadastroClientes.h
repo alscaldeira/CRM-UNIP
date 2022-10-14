@@ -1,10 +1,6 @@
 void cadastroClientes()
 
 {
-
-    FILE *logFile;
-    logFile=fopen("log.txt", "a");
-    fprintf(logFile,"Iniciou o cadastro do cliente.\n");
         // variaveis
     char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20], uf[2], cidade[30], estCivil[15];
     int cpf, ano, op, op2; //op um está ligado ao sexo do cliente, já a opção dois o estado civil.
@@ -13,18 +9,14 @@ void cadastroClientes()
     int dependentes, numeroDependentes, empregado;
     char profissao[35], nomeEmprego[30];
     float renda, bens;
-
+        // Tentativa de salvar o cadastro em TXT
   FILE *cadastroCLIENTES;
   //abertura do arquivo. Caso ocorra falha, finaliza o programa.
   if((cadastroCLIENTES=fopen("clientes.txt", "a"))==NULL)
   {
     printf("Falha na abertura do arquivo!");
-    //Abertura do log registrando a falha. Carlos
-    fprintf(logFile,"Falha ao cadastrar cliente.\n");
-    fclose(logFile);
     getch();
-
-    menuPrincipal();
+    //menu();
   }
 
     system("cls");
@@ -108,7 +100,9 @@ void cadastroClientes()
     {
         printf("Quantos dependestes?");
         scanf("%d", &numeroDependentes);
-    } else {
+    }
+    else
+    {
         numeroDependentes = 0;
     }
 
@@ -145,9 +139,6 @@ void cadastroClientes()
 
     fclose(cadastroCLIENTES);
     printf ("\n\nCadastro realizado com sucesso");
-    //Abertura do log para registrar o cadastro realizado. Carlos
-    fprintf(logFile,"Cadastro de cliente realizado.\n");
-    fclose(logFile);
 
     getch();
 
