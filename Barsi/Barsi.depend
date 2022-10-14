@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1665588035 source:c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\main.c
+	"mainHeader.h"
+
+1665548104 source:c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\logo.c
+
+1665548232 source:c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\menuprincipal.c
+	<stdio.h>
+	<stdlib.h>
+
+1665549093 source:c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\login.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1665548550 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\telainicial.c
+
+1665548104 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\logo.c
+
+1665549093 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\login.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1665601524 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\mainheader.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"login.h"
+	"logo.h"
+	"telaInicial.h"
+	"menuPrincipal.h"
+	"sair.h"
+
+1665626738 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\login.h
+
+1665611998 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\logo.h
+
+1665610316 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\telainicial.h
+
+1665622585 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\menuprincipal.h
+
+1665602277 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\sair.h
+
