@@ -14,6 +14,7 @@ void menuPrincipal() {
         FILE *logFile;
         logFile=fopen("log.txt", "a");
         fprintf(logFile,"Menu principal aberto.\n");
+        fclose(logFile);
 
 
         printf("Qual opcao deseja:\n");
@@ -33,13 +34,12 @@ void menuPrincipal() {
             break;
         } else {
             printf("Opcao invalida, por favor digite uma opcao valida!\n\n\n");
-            printf("Digite uma tecla para continuar.....");
             //Carlos - Acrescentei o registro do log caso o usuário tenha digitado uma opção invalida.
             FILE *logFile;
             logFile=fopen("log.txt", "a");
             fprintf(logFile,"Usuario digitou uma opção invalida.\n");
             fclose(logFile);
-            getch();
+            system("pause");
         }
     }
 

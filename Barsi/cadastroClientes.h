@@ -82,7 +82,7 @@ void cadastroClientes()
     printf("1 -- Casado/a\n");
     printf("2 -- Solteiro/a\n");
     printf("3 -- Uniao estavel\n");
-    printf("4 -- Vilvo/a\n");
+    printf("4 -- Viuvo/a\n");
     printf("Digite uma opcao valida: ");
     scanf("%d", &op2);
 
@@ -106,9 +106,9 @@ void cadastroClientes()
     }
 
 
-    printf("\nTem dependestes?\n");
-    printf("1 -- sim\n");
-    printf("Outra tecla - nao\n");
+    printf("\nTem dependentes?\n");
+    printf("1 -- Sim\n");
+    printf("2 -- Nao\n");
     printf("Digite uma opcao valida: ");
     scanf("%d", &dependentes);
 

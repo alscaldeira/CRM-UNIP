@@ -46,3 +46,19 @@ Nome da empresa atual:Apple
 Renda Mensal:15000
 Valor em bens:1000000
 
+Nome:Caique Reis
+CPF:65656565566
+Nascimento:30/02/2002
+Sexo:Masculino
+Nacionalidade:ptbr
+UF:Sp
+Cidade:Sp
+Endereco:rua tavlez 99
+Email:caiquereis30@gmail.com
+Estado civil:Casado/a
+Numero de dependetes:1
+Profissão:Redes
+Nome da empresa atual:Barsi
+Renda Mensal:8590
+Valor em bens:150000
+
