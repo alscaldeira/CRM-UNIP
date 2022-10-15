@@ -30,3 +30,19 @@ Nome da empresa atual:hfhfhf
 Renda Mensal:5656656384
 Valor em bens:569898
 
+Nome:Anderson Caldeira
+CPF:65656565656
+Nascimento:01/09/1999
+Sexo:Nao definir
+Nacionalidade:Tailandes
+UF:SP
+Cidade:Sao paulo
+Endereco:Playboy
+Email:Anderson1234@gmail.com
+Estado civil:Viuvo/a
+Numero de dependetes:0
+Profissão:dev
+Nome da empresa atual:Apple
+Renda Mensal:15000
+Valor em bens:1000000
+

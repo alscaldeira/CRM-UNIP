@@ -42,6 +42,8 @@ void investidorNivel() {
 
     }
 
+    system("cls");
+    logo();
     printf("Qual percentual dos seus recursos voce espera resgatar nos proximos 12 meses?\n");
     printf("(1) Mais de 25%%.\n");
     printf("(2) Entre 5%% e 25%%.\n");
@@ -70,6 +72,8 @@ void investidorNivel() {
 
     }
 
+    system("cls");
+    logo();
     printf("Por quanto tempo pretende manter seus recursos investidos?\n");
     printf("(1) Ate 1 ano.\n");
     printf("(2) De 1 a 3 anos.\n");
@@ -99,6 +103,7 @@ void investidorNivel() {
     }
 
     system("cls");
+    logo();
     printf("Em quais dos produtos voce investe e/ou investiu mais de 10%% de sua renda nos ultimos 12 meses?\n");
     printf("(1) Nenhum.\n");
     printf("(2) Renda Fixa(CDBs, Teseuro, Fundos de RF, etc).\n");
