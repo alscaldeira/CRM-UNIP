@@ -19,8 +19,7 @@ void telaInicial() {
             break;
         } else {
             printf("Opcao invalida, por favor digite uma opcao valida!\n\n\n");
-            printf("Digite uma tecla para continuar.....");
-            getch();
+            system("pause");
         }
 
     }
@@ -28,7 +27,6 @@ void telaInicial() {
     switch (saida) {
         case 1:
             //Enviar para a tela de login
-            printf("Bem vindo a sua conta\n");
             login();
             break;
 

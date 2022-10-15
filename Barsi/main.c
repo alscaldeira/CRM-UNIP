@@ -7,9 +7,7 @@ int main() {
 
     logo();
 
-    printf("Digite uma tecla para continuar............");
-
-    getch();
+    system("pause");
 
     telaInicial();
 

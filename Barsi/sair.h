@@ -10,8 +10,7 @@ void sair(){
     logFile=fopen("log.txt", "a");
     fprintf(logFile,"Sistema encerrado.\n");
     fclose(logFile);
-    printf("Digite uma tecla para sair..............");
-    getch();
+    system("pause");
     return 0;
 }
 
