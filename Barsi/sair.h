@@ -1,5 +1,3 @@
-#ifndef SAIR_H_INCLUDED
-#define SAIR_H_INCLUDED
 
 void sair(){
 
@@ -14,4 +12,3 @@ void sair(){
     return 0;
 }
 
-#endif // SAIR_H_INCLUDED

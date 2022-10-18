@@ -1,5 +1,3 @@
-#ifndef LOGO_H_INCLUDED
-#define LOGO_H_INCLUDED
 
 void logo() {
 
@@ -11,5 +9,3 @@ void logo() {
     printf("------------------------------------------------------\n\n");
 
 }
-
-#endif // LOGO_H_INCLUDED

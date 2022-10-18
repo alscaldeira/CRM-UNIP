@@ -1,6 +1,3 @@
-#ifndef LOGIN_H_INCLUDED
-#define LOGIN_H_INCLUDED
-
 #define ENTER 13    // CÓDIGO ASCII DA TECLA ENTER
 #define BACKSPACE 8 // CÓDIGO ASCII DA TECLA BACKSPACE
 #define SPACE 32    // CÓDIGO ASCII DA TECLA BARRA DE ESPACO
@@ -109,6 +106,3 @@ void login() {
     }
 
 }
-
-
-#endif // LOGIN_H_INCLUDED

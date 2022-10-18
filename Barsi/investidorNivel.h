@@ -1,6 +1,3 @@
-#ifndef INVESTIDORNIVEL_H_INCLUDED
-#define INVESTIDORNIVEL_H_INCLUDED
-
 
 void investidorNivel() {
 
@@ -162,5 +159,3 @@ void investidorNivel() {
 
 
 }
-
-#endif // INVESTIDORNIVEL_H_INCLUDED

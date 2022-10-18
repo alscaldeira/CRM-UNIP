@@ -1,5 +1,3 @@
-#ifndef TELAINICIAL_H_INCLUDED
-#define TELAINICIAL_H_INCLUDED
 
 void telaInicial() {
     int saida, cont;
@@ -37,5 +35,3 @@ void telaInicial() {
     }
 
 }
-
-#endif // TELAINICIAL_H_INCLUDED
