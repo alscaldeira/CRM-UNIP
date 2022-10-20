@@ -5,8 +5,7 @@
 #define ESC 27      // CÓDIGO ASCII DA TECLA ESC
 
 void login() {
-
-    //Essa página suscedará a página de bem-vindo do usuario
+    setlocale(LC_ALL, "Portuguese");
 
     char ch = '\0';
     char user[15] = "esc";
@@ -26,7 +25,7 @@ void login() {
 
         printf("\nTentativa %d de 3\n\n", cont);
 
-        printf("Usuario: ");
+        printf("Usuário: ");
         scanf("%s", loginUser);
 
         printf("Senha: ");
@@ -73,7 +72,7 @@ void login() {
             break;
 
         } else if(strcmp(user, loginUser) != 0 && strcmp(senha, loginSenha) == 0){
-            printf("\nUsuario nao existe!!!!!\n");
+            printf("\nUsuário não existe!!!!!\n");
             getch();
 
         } else if(strcmp(user, loginUser) == 0 && strcmp(senha, loginSenha) != 0){

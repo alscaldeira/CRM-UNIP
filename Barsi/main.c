@@ -9,7 +9,7 @@ int main() {
 
     system("pause");
 
-    telaInicial();
+    consultaAnalista();
 
     return 0;
 }

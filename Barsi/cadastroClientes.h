@@ -1,30 +1,27 @@
-void cadastroClientes()
-
-{
+void cadastroClientes(){
+    setlocale(LC_ALL, "Portuguese");
 
     FILE *logFile;
     logFile=fopen("log.txt", "a");
     fprintf(logFile,"Iniciou o cadastro do cliente.\n");
         // variaveis
-    char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20], uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30];
+    char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
+    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30];
     int op, op2; //op um está ligado ao sexo do cliente, já a opção dois o estado civil.
 
     int dependentes, numeroDependentes, empregado;
     char profissao[35], nomeEmprego[30];
     float renda, bens;
 
-  FILE *cadastroCLIENTES;
-  //abertura do arquivo. Caso ocorra falha, finaliza o programa.
-  if((cadastroCLIENTES=fopen("clientes.txt", "a"))==NULL)
-  {
-    printf("Falha na abertura do arquivo!");
-    //Abertura do log registrando a falha. Carlos
-    fprintf(logFile,"Falha ao cadastrar cliente.\n");
-    fclose(logFile);
-    getch();
+    FILE *cadastroCLIENTES;
+    if((cadastroCLIENTES = fopen("clientes.txt", "a"))==NULL){
+        printf("Falha na abertura do arquivo!");
+        fprintf(logFile,"Falha ao cadastrar cliente.\n");
+        fclose(logFile);
+        getch();
 
-    menuPrincipal();
-  }
+        menuPrincipal();
+}
 
     system("cls");
     logo();

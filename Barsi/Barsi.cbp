@@ -33,6 +33,8 @@
 		</Compiler>
 		<Unit filename="cadastroAnalista.h" />
 		<Unit filename="cadastroClientes.h" />
+		<Unit filename="consultaAnalista.h" />
+		<Unit filename="consultaCliente.h" />
 		<Unit filename="investidorNivel.h" />
 		<Unit filename="login.h" />
 		<Unit filename="logo.h" />
@@ -40,6 +42,8 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="mainHeader.h" />
+		<Unit filename="menuAnalista.h" />
+		<Unit filename="menuClientes.h" />
 		<Unit filename="menuPrincipal.h" />
 		<Unit filename="sair.h" />
 		<Unit filename="telaInicial.h" />

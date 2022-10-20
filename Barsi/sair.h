@@ -1,5 +1,6 @@
 
 void sair(){
+    setlocale(LC_ALL, "Portuguese");
 
     system("cls");
     printf("Obrigado volte sempre!\n\n\n\n");

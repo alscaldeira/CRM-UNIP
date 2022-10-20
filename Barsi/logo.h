@@ -1,5 +1,6 @@
 
 void logo() {
+    setlocale(LC_ALL, "Portuguese");
 
     printf("\t ____                 _ \n");
     printf("\t| __ )  __ _ _ __ ___(_)\n");

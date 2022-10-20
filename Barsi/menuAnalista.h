@@ -1,5 +1,5 @@
 
-void menuPrincipal() {
+void menuAnalista() {
     setlocale(LC_ALL, "Portuguese");
 
     int saida;
@@ -9,24 +9,24 @@ void menuPrincipal() {
 
         logo();
 
-        //Carlos - Registro de abertura de menu no LOG.
         FILE *logFile;
         logFile=fopen("log.txt", "a");
-        fprintf(logFile,"Menu principal aberto.\n");
+        fprintf(logFile,"Menu analista aberto.\n");
         fclose(logFile);
 
 
         printf("Qual opcao deseja:\n");
         printf("------------------------------------------------------\n");
-        printf("1 --- Gerenciamento do cliente\n");
-        printf("2 --- Gestão do analista\n");
-        printf("9 --- Logout\n");
-        printf("0 --- Sair\n");
+        printf("1 --- Incluir analista\n");
+        /*printf("2 --- Alterar analista\n");
+        printf("3 --- Consultar analista\n");
+        printf("4 --- Excluir analista\n");*/
+        printf("5 --- Retornar ao menu\n");
         printf("Digite uma opção: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida < 0 || saida <= 2 || saida == 9){
+        if(saida < 1 || saida <= 5){
             break;
         } else {
             printf("Opção inválida, por favor digite uma opção válida!\n\n\n");
@@ -41,21 +41,24 @@ void menuPrincipal() {
 
     switch (saida) {
         case 1:
-            menuClientes();
+            cadastroAnalista();
             break;
 
-        case 2:
-            menuAnalista();
+       /* case 2:
+            alterarAnalista();
             break;
 
-        case 9:
-            telaInicial();
+        case 3:
+            consultaranalista();
             break;
+
+        case 4:
+            excluirAnalista();
+            break; */
 
         default:
-            sair();
+            menuPrincipal();
             break;
 
     }
-
 }

@@ -1,5 +1,6 @@
 
 void cadastroAnalista(){
+    setlocale(LC_ALL, "Portuguese");
 
     FILE *logFile;
     logFile=fopen("log.txt", "a");

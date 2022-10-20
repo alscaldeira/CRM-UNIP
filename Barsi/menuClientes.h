@@ -1,5 +1,5 @@
 
-void menuPrincipal() {
+void menuClientes() {
     setlocale(LC_ALL, "Portuguese");
 
     int saida;
@@ -9,31 +9,31 @@ void menuPrincipal() {
 
         logo();
 
-        //Carlos - Registro de abertura de menu no LOG.
         FILE *logFile;
         logFile=fopen("log.txt", "a");
-        fprintf(logFile,"Menu principal aberto.\n");
+        fprintf(logFile,"Menu cliente aberto.\n");
         fclose(logFile);
 
 
         printf("Qual opcao deseja:\n");
         printf("------------------------------------------------------\n");
-        printf("1 --- Gerenciamento do cliente\n");
-        printf("2 --- Gestão do analista\n");
-        printf("9 --- Logout\n");
-        printf("0 --- Sair\n");
+        printf("1 --- Incluir cliente\n");
+        /*printf("2 --- Alterar cliente\n");
+        printf("3 --- Consultar cliente\n");
+        printf("4 --- Excluir cliente\n");*/
+        printf("5 --- Retornar ao menu\n");
         printf("Digite uma opção: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida < 0 || saida <= 2 || saida == 9){
+        if(saida < 1 || saida <= 5){
             break;
         } else {
-            printf("Opção inválida, por favor digite uma opção válida!\n\n\n");
+            printf("Opção invalida, por favor digite uma opção válida!\n\n\n");
             //Carlos - Acrescentei o registro do log caso o usuário tenha digitado uma opção invalida.
             FILE *logFile;
             logFile=fopen("log.txt", "a");
-            fprintf(logFile,"Usuário digitou uma opção inválida.\n");
+            fprintf(logFile,"Usuário digitou uma opção invalida.\n");
             fclose(logFile);
             system("pause");
         }
@@ -41,19 +41,23 @@ void menuPrincipal() {
 
     switch (saida) {
         case 1:
-            menuClientes();
+            cadastroClientes();
             break;
 
-        case 2:
-            menuAnalista();
+       /* case 2:
+            alterarClientes();
             break;
 
-        case 9:
-            telaInicial();
+        case 3:
+            consultarClientes();
             break;
+
+        case 4:
+            excluirClientes();
+            break; */
 
         default:
-            sair();
+            menuPrincipal();
             break;
 
     }
