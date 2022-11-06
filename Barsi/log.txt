@@ -86,3 +86,23 @@ Foi realizado o cadastro de novos integrantes no sistema.
 Menu principal aberto.
 Menu analista aberto.
 Menu principal aberto.
+Iniciou o cadastro do cliente.
+Iniciou o consulta do analista.
+Iniciou o cadastro do cliente.
+Foi realizado o cadastro de novos integrantes no sistema.
+Menu principal aberto.
+Menu analista aberto.
+Iniciou o cadastro do cliente.
+Foi realizado o cadastro de novos integrantes no sistema.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Iniciou o cadastro do cliente.
+Foi realizado o cadastro de novos integrantes no sistema.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Sistema encerrado.
+Iniciou o consulta do analista.
+Iniciou o consulta do analista.

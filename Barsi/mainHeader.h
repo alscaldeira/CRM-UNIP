@@ -18,4 +18,3 @@
 #include "consultaCliente.h"
 #include "consultaAnalista.h"
 
-

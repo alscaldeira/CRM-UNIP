@@ -18,9 +18,9 @@ void menuAnalista() {
         printf("Qual opcao deseja:\n");
         printf("------------------------------------------------------\n");
         printf("1 --- Incluir analista\n");
-        /*printf("2 --- Alterar analista\n");
+        printf("2 --- Alterar analista\n");
         printf("3 --- Consultar analista\n");
-        printf("4 --- Excluir analista\n");*/
+        printf("4 --- Excluir analista\n");
         printf("5 --- Retornar ao menu\n");
         printf("Digite uma opção: ");
         scanf("%d", &saida);
@@ -44,17 +44,17 @@ void menuAnalista() {
             cadastroAnalista();
             break;
 
-       /* case 2:
-            alterarAnalista();
+       case 2:
+            alteracaoAnalistas();
             break;
 
         case 3:
-            consultaranalista();
+            consultaAnalistas();
             break;
 
         case 4:
-            excluirAnalista();
-            break; */
+            exclusaoAnalistas();
+            break;
 
         default:
             menuPrincipal();

@@ -8,7 +8,7 @@ int main() {
 
     system("pause");
 
-    consultaAnalista();
+    cadastroAnalista();
 
     return 0;
 }

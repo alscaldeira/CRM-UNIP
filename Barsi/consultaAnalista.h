@@ -1,4 +1,4 @@
-void consultaAnalista() {
+void consultaAnalista(){
     setlocale(LC_ALL, "Portuguese");
 
     FILE *logFile;
