@@ -80,3 +80,9 @@ Menu cliente aberto.
 Menu cliente aberto.
 Menu cliente aberto.
 Iniciou o consulta do analista.
+Menu analista aberto.
+Iniciou o cadastro do cliente.
+Foi realizado o cadastro de novos integrantes no sistema.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
