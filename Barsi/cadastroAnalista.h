@@ -71,19 +71,30 @@ void consultaAnalistas(){
         system("pause");
         menuPrincipal();
     }
-    char nome[100], senha[100];
-
-    if(CadastroAnalistas != NULL){
-        while(fscanf(CadastroAnalistas, "%[^\n]s, %[^\n]s", nome, senha) != EOF) {
-            printf("%s , %s", nome, senha);
+    int cpf,a=0;
+    printf("Informe o CPF a ser pesquisado:");
+    scanf("%d",&cpf);
+    fflush(stdin);
+    fseek(CadastroAnalistasp,SEEK_SET,1);
+    fread(&analista,sizeof(analista),1,CadastroAnalistasp);
+    while(!feof(CadastroAnalistasp)){
+        if(analista.cpf==cpf){
+        a++;
+        printf("CPF: %d\n",analista.cpf);
+        printf("Login:%s\n",analista.nomeAnalista);
+        printf("Senha:%d\n",analista.senha);
         }
+        fread(&analista,sizeof(analista),1,CadastroAnalistasp);
+    }
+    if(a==0){
+        printf("Analista não encontrado.\n");
 
     }
-    fclose(CadastroAnalistas);
-
+    fclose(CadastroAnalistasp);
+    fclose(auxAnal);
     system("pause");
 
     menuAnalista();
 }
 
-}
+
