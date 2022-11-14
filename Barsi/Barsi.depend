@@ -173,3 +173,54 @@
 
 1667748237 d:\unip\pim 2º semestre\code\crm-unip\barsi\cad_anal_txt.h
 
+1668349064 source:c:\users\anderson\workspace\crm-unip\barsi\main.c
+	"mainHeader.h"
+
+1668349365 c:\users\anderson\workspace\crm-unip\barsi\mainheader.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<locale.h>
+	<stdbool.h>
+	"init.h"
+	"login.h"
+	"logo.h"
+	"telaInicial.h"
+	"menuPrincipal.h"
+	"sair.h"
+	"cadastroClientes.h"
+	"investidorNivel.h"
+	"cadastroAnalista.h"
+	"menuClientes.h"
+	"menuAnalista.h"
+	"consultaCliente.h"
+	"consultaAnalista.h"
+
+1668351559 c:\users\anderson\workspace\crm-unip\barsi\login.h
+
+1668287422 c:\users\anderson\workspace\crm-unip\barsi\logo.h
+
+1667766077 c:\users\anderson\workspace\crm-unip\barsi\telainicial.h
+
+1668353585 c:\users\anderson\workspace\crm-unip\barsi\menuprincipal.h
+
+1668351193 c:\users\anderson\workspace\crm-unip\barsi\sair.h
+
+1667766077 c:\users\anderson\workspace\crm-unip\barsi\cadastroclientes.h
+
+1667766077 c:\users\anderson\workspace\crm-unip\barsi\investidornivel.h
+
+1668383968 c:\users\anderson\workspace\crm-unip\barsi\cadastroanalista.h
+
+1667766077 c:\users\anderson\workspace\crm-unip\barsi\menuclientes.h
+
+1668354124 c:\users\anderson\workspace\crm-unip\barsi\menuanalista.h
+
+1667766077 c:\users\anderson\workspace\crm-unip\barsi\consultacliente.h
+
+1668287439 c:\users\anderson\workspace\crm-unip\barsi\consultaanalista.h
+
+1668289424 c:\users\anderson\workspace\crm-unip\barsi\init.h
+

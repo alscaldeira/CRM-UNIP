@@ -1,11 +1,10 @@
 #define ENTER 13    // CÓDIGO ASCII DA TECLA ENTER
 #define BACKSPACE 8 // CÓDIGO ASCII DA TECLA BACKSPACE
 #define SPACE 32    // CÓDIGO ASCII DA TECLA BARRA DE ESPACO
-#define TAB 9       // CÓDIGO ASCII DA TECLA BACKSPACE
+#define TAB 9       // CÓDIGO ASCII DA TECLA TAB
 #define ESC 27      // CÓDIGO ASCII DA TECLA ESC
 
 void login() {
-    setlocale(LC_ALL, "Portuguese");
 
     char ch = '\0';
     char user[15] = "esc";
@@ -88,7 +87,6 @@ void login() {
     }
 
     if(permissao == 1){
-        //Carlos - Acrescentei o log.
         FILE *logFile;
         logFile=fopen("log.txt", "a");
         fprintf(logFile,"Login realizado com sucesso por %s.\n", loginUser);
@@ -96,7 +94,6 @@ void login() {
         menuPrincipal();
 
     } else {
-         //Carlos - Acrescentei o log.
         FILE *logFile;
         logFile=fopen("log.txt", "a");
         fprintf(logFile,"Login recusado, limite de tentativas excedidas.\n");

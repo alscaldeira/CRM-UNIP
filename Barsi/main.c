@@ -2,13 +2,9 @@
 
 int main() {
 
-    printf("\t\tBem-vindo a\n");
+    init();
 
-    logo();
-
-    system("pause");
-
-    cadastroAnalista();
+    menuPrincipal();
 
     return 0;
 }

@@ -4,7 +4,9 @@
 #include <conio.h>
 #include <windows.h>
 #include <locale.h>
+#include <stdbool.h>
 
+#include "init.h"
 #include "login.h"
 #include "logo.h"
 #include "telaInicial.h"
@@ -17,4 +19,3 @@
 #include "menuAnalista.h"
 #include "consultaCliente.h"
 #include "consultaAnalista.h"
-

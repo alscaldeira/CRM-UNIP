@@ -1,7 +1,4 @@
-
 void sair(){
-    setlocale(LC_ALL, "Portuguese");
-
     system("cls");
     printf("Obrigado volte sempre!\n\n\n\n");
     //Carlos - Log registra saidas.
@@ -10,6 +7,5 @@ void sair(){
     fprintf(logFile,"Sistema encerrado.\n");
     fclose(logFile);
     system("pause");
-    return 0;
 }
 

@@ -1,61 +1,67 @@
-
 void menuPrincipal() {
-    setlocale(LC_ALL, "Portuguese");
-
     int saida;
 
-    for(int cont = 1; cont <= 3; cont++){
+    int errorsCount = 0;
+    bool finalizar = false;
+
+    while(errorsCount < 3 && !finalizar) {
         system("cls");
 
         logo();
 
-        //Carlos - Registro de abertura de menu no LOG.
         FILE *logFile;
         logFile=fopen("log.txt", "a");
         fprintf(logFile,"Menu principal aberto.\n");
         fclose(logFile);
 
-
         printf("Qual opcao deseja:\n");
         printf("------------------------------------------------------\n");
-        printf("1 --- Gerenciamento do cliente\n");
-        printf("2 --- Gestão do analista\n");
-        printf("9 --- Logout\n");
-        printf("0 --- Sair\n");
+        printf("1 - Gerenciamento do cliente\n");
+        printf("2 - Gestão do analista\n");
+        printf("9 - Logout\n");
+        printf("0 - Sair\n");
         printf("Digite uma opção: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida < 0 || saida <= 2 || saida == 9){
-            break;
-        } else {
-            printf("Opção inválida, por favor digite uma opção válida!\n\n\n");
-            //Carlos - Acrescentei o registro do log caso o usuário tenha digitado uma opção invalida.
-            FILE *logFile;
-            logFile=fopen("log.txt", "a");
-            fprintf(logFile,"Usuário digitou uma opção inválida.\n");
-            fclose(logFile);
-            system("pause");
+        switch(saida) {
+            case 1:
+                menuClientes();
+                break;
+            case 2:
+                menuAnalista();
+                break;
+            case 9:
+                telaInicial();
+                break;
+            case 0:
+                finalizar = true;
+                sair();
+                break;
+            default:
+                errorsCount++;
+                opcaoInvalida(errorsCount);
+                break;
         }
     }
+}
 
-    switch (saida) {
-        case 1:
-            menuClientes();
-            break;
+void opcaoInvalida(int errorsCount) {
+    printf("Opção inválida, por favor digite uma opção válida!\n\n");
 
-        case 2:
-            menuAnalista();
-            break;
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
 
-        case 9:
-            telaInicial();
-            break;
+    fprintf(logFile,"Usuário digitou uma opção inválida pela %dº vez.\n", errorsCount);
 
-        default:
-            sair();
-            break;
-
+    if(errorsCount == 2) {
+        printf("Você teve um total de duas respostas inválidas.\n");
+        printf("O software irá finalizar caso a próxima entrada for inválida.\n\n");
+    } else if (errorsCount == 3) {
+        printf("O software será fechado devido à quantidade excessiva de entrada inválida.\n");
+        fprintf(logFile,"Software será fechado devido à quantidade de erros excessivos de entrada.", errorsCount);
     }
 
+    fclose(logFile);
+    system("pause");
 }
