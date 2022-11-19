@@ -6,6 +6,5 @@ void sair(){
     logFile=fopen("log.txt", "a");
     fprintf(logFile,"Sistema encerrado.\n");
     fclose(logFile);
-    system("pause");
 }
 

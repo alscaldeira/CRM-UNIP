@@ -1,153 +1,174 @@
-#define BUFFER 7200
+#define TAM 100
 
-typedef struct{
+typedef struct Analista{
+    int codigo;
     char nome[30],senha[30],cpf[11];
-} AnalistaStruct;
+    char deletado;
+} analistas;
 
-char arquivo[] = "dados-analistas.bin";
+char arquivo[] = "analista.bin";
+analistas max[TAM];
+FILE *arq;
 
-void cadastroAnalista(){
-
-    AnalistaStruct analista;
-
-    FILE *logFile;
-    logFile=fopen("log.txt", "a");
-    fprintf(logFile,"Iniciou o cadastro do cliente.\n");
-    fclose (logFile);
-
-    FILE *auxAnal;
-    FILE *CadastroAnalistasp;
-    CadastroAnalistasp = fopen(arquivo, "a");
-    auxAnal=fopen("auxiliarAnal.txt", "ab");
-    if (CadastroAnalistasp == NULL || auxAnal==NULL){
-        printf("Erro ao abrir o arquivo!\n");
-        system("pause");
-        menuPrincipal();
-    }
-
-    char continua='S';
-    while(continua == 83 || continua == 115) // Comparando com os códigos 'S' e 's'
+void cadastroAnalista()
+{
+    struct Analista analistas;
+    int retorno;
+    arq = fopen(arquivo, "ab");
+    if (arq == NULL)
     {
-        system("cls");
-        printf("Digite o CPF do colaborador sem traços e pontos: ");
-        scanf("%s", &analista.cpf);
-        printf("Digite o nome(login)...........................: ");
-        scanf("%s", &analista.nome);
-        printf("Digite a senha.................................: ");
-        scanf("%s", &analista.senha);
-
-        fprintf(CadastroAnalistasp, "%s; %s; %s;\n",
-                analista.nome, analista.senha, analista.cpf);
-
-        printf("Deseja continuar cadastrando?.............(S/N): ");
-        continua = NULL;
-        scanf("%s", &continua);
+        printf("Erro ao abrir arquivo");
+        return;
     }
-
-    fclose(CadastroAnalistasp);
-    fclose(auxAnal);
-    logFile=fopen("log.txt", "a");
-    fprintf(logFile, "Foi realizado o cadastro de novos integrantes no sistema.\n");
-    fclose(logFile);
-    printf("Cadastro/s realizado/s com sucesso.");
-    system("pause");
-
+    printf("Digite o código do analista: ");
+    scanf("%d", &analistas.codigo);
+    printf("Digite o nome do analista: ");
+    fflush(stdin);
+    gets(analistas.nome);
+    printf("Digite a senha do analista: ");
+    fflush(stdin);
+    gets(analistas.senha);
+    printf("Digite o cpf do analista: ");
+    fflush(stdin);
+    gets(analistas.cpf);
+    retorno = fwrite (&analistas, sizeof(analistas), 1, arq);
+    if (retorno == 1)
+    {
+        fclose (arq);
+        printf("\n Dados do produto incluídos com sucesso!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    else
+    {
+        fclose (arq);
+        printf("\n Falha ao gravar dados do produto.");
+        system("pause>nul");
+        system("cls || clear");
+    }
 }
 
 void consultaAnalistas(){
-
-    FILE *logFile;
-    logFile=fopen("log.txt", "a");
-    fprintf(logFile,"Iniciou o consulta do analista.\n");
-
-    FILE *auxAnal;
-    FILE *CadastroAnalistasp;
-    CadastroAnalistasp = fopen(arquivo, "r");
-    auxAnal=fopen("auxiliarAnal.txt", "r");
-    if (CadastroAnalistasp == NULL || auxAnal==NULL){
-        printf("Erro ao abrir o arquivo!\n");
-        system("pause");
-        return;
+    arq = fopen(arquivo, "rb");
+    if (arq == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
     }
+    struct Analista analistas;
+    int cod, encontrado = 0;
+    printf ("\nDigite o codigo que procura: ");
+    scanf ("%d", &cod);
 
-    int cpf,a=0;
-    //printf("Informe o CPF a ser pesquisado:");
-    //scanf("%d",&cpf);
-    fflush(stdin);
-    fseek(CadastroAnalistasp,SEEK_SET,1);
-
-    char buff[BUFFER];
-    fread(&buff,sizeof(buff),1,CadastroAnalistasp);
-
-    AnalistaStruct * analistas[100];
-    converterBufferParaStruct(buff, analistas);
-
-    /*
-    while(!feof(CadastroAnalistasp)){
-        printf("Nome do analista: %s\n", analista.nomeAnalista);
-        if(analista.cpf==cpf){
-            a++;
-            printf("CPF: %d\n",analista.cpf);
-            printf("Login:%s\n",analista.nomeAnalista);
-            printf("Senha:%d\n",analista.senha);
+    while (fread (&analistas, sizeof(analistas), 1, arq))
+    {
+        if ((cod == analistas.codigo) && (analistas.deletado != '*'))
+        {
+            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            encontrado = 1;
+            system("pause>nul");
+            system("cls || clear");
         }
-        fread(&analista,sizeof(analista),1,CadastroAnalistasp);
-    }*/
-    //if(a==0){
-    //    printf("Analista não encontrado.\n");
-    //}
-
-    fclose(CadastroAnalistasp);
-    fclose(auxAnal);
-    system("pause");
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(arq);
 }
 
-void exclusaoAnalistas() {}
-void alteracaoAnalistas() {}
-
-void converterBufferParaStruct(char buff[], AnalistaStruct *analista[]) {
-    int maxCharsEmAnalista = 75;
-
-    int posicaoItem = 1;
-    int posicaoAnalista = 1;
-    int posicaoChar = 0;
-
-    analista = (AnalistaStruct*) malloc(sizeof(AnalistaStruct) * 100 * (sizeof(char) * 3));
-
-    /*printf("size(Analista): %d; size(Nome): %d; size(Senha): %d; size(CPF): %d; size(char): %d\n",
-           sizeof(AnalistaStruct),
-           sizeof(analista[0]->nome),
-           sizeof(analista[0]->senha),
-           sizeof(analista[0]->cpf),
-           sizeof(char));
-*/
-
-    for(int i=0; i<sizeof(buff); i++) {
-
-        if(buff == NULL || buff == '\0') break;
-
-        //if(posicaoItem == 1) strncat(analista[posicaoAnalista]->nome, &buff[i], 1);
-        if(posicaoItem == 1) {
-            analista = malloc(sizeof(analista) * sizeof(AnalistaStruct));
-            analista[posicaoAnalista] = malloc(sizeof(AnalistaStruct));
-            analista[posicaoAnalista]->nome[posicaoChar] = buff[i];
-        }
-        //if(posicaoItem == 2) strcat(analista[posicaoAnalista]->senha, buff[i]);
-        //if(posicaoItem == 3) strcat(analista[posicaoAnalista]->cpf, buff[i]);
-
-        /*
-        printf(" Analista: %d { ", posicaoAnalista);
-        printf("Nome: %s; ", analista[posicaoAnalista]->nome);
-        printf("Senha: %s; ", analista[posicaoAnalista]->senha);
-        printf("CPF: %s }\n", analista[posicaoAnalista]->cpf);
-        */
-
-        printf("%c ", buff[i]);
-        printf("%s[%d] ", analista[posicaoAnalista]->nome[posicaoChar], i);
-        printf("\n");
-
-        posicaoChar++;
-        if(buff[i] == ';') posicaoItem++;
-        if(buff[i] == '\n') posicaoItem = 1;
+void exclusaoAnalistas() {
+    arq = fopen(arquivo, "r+b");
+    if (arq == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
     }
+    struct Analista analistas;
+    int cod, encontrado = 0;
+    char certeza;
+    printf ("\nDigite o codigo que deseja EXCLUIR: \n");
+    scanf ("%d", &cod);
+
+    while (fread (&analistas, sizeof(analistas), 1, arq))
+    {
+        if (cod == analistas.codigo)
+        {
+            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            encontrado = 1;
+
+            printf("\nTem certeza que quer excluir este analista? s/n \n");
+            fflush(stdin);
+            scanf("%c", &certeza);
+            if (certeza == 's' || certeza == 'S')
+            {
+                analistas.deletado = '*';
+                fseek(arq,sizeof(struct Analista)*-1, SEEK_CUR);
+                fwrite(&analistas, sizeof(analistas), 1, arq);
+                fseek(arq, sizeof(analistas)* 0, SEEK_END);
+                printf("\nAnalista excluido com sucesso! \n");
+                system("pause>nul");
+                system("cls || clear");
+            }
+            else if (certeza == 'n')
+            {
+                system("cls || clear");
+            }
+        }
+    }
+    if (!encontrado)
+    {
+        printf ("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(arq);
+}
+void alteracaoAnalistas() {
+    arq = fopen(arquivo, "r+b");
+    if (arq == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+
+    struct Analista analistas;
+    int cod, encontrado = 0;
+    printf ("\nDigite o codigo que deseja alterar: \n");
+    scanf ("%d", &cod);
+
+    while (fread (&analistas, sizeof(analistas), 1, arq))
+    {
+        if (cod == analistas.codigo)
+        {
+            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            encontrado = 1;
+
+            fseek(arq,sizeof(struct Analista)*-1, SEEK_CUR);
+            printf("\nDigite um novo nome: \n");
+            fflush(stdin);
+            gets(analistas.nome);
+            printf("\nDigite o novo cpf....: \n");
+            scanf("%f", &analistas.cpf);
+
+            fwrite(&analistas, sizeof(analistas), 1, arq);
+            fseek(arq, sizeof(analistas)* 0, SEEK_END);
+
+            printf("\n Dados do analista alterados com sucesso!");
+            system("pause>nul");
+            system("cls || clear");
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(arq);
 }
