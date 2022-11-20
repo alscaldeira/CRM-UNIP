@@ -1121,3 +1121,47 @@ Menu analista aberto.
 Menu analista aberto.
 Menu principal aberto.
 Sistema encerrado.
+Menu principal aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Usuário digitou uma opção inválida pela 1º vez.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Sistema encerrado.
