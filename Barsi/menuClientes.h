@@ -16,13 +16,19 @@ void menuClientes() {
 
 
         printf("Qual opcao deseja:\n");
-        printf("------------------------------------------------------\n");
         printf("1 - Incluir cliente\n");
 	printf("2 - Alterar cliente\n");
         printf("3 - Consultar cliente\n");
         printf("4 - Excluir cliente\n");
         printf("5 - Nível do investidor\n");
         printf("6 - Retornar ao menu\n");
+        printf("1 - Incluir cliente\n");
+        /*printf("2 - Alterar cliente\n");
+        printf("3 - Consultar cliente\n");
+        printf("4 - Excluir cliente\n");*/
+        printf("5 - Nível do investidor\n");
+        printf("6 - Retornar ao menu\n");
+
         printf("Digite uma opção: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");

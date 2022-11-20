@@ -36,7 +36,7 @@ void cadastroAnalista()
         fclose (arq);
         fprintf(logFile,"Cadastro de analista realizado.\n");
         fclose(logFile);
-        printf("\n Dados do analista incluídos com sucesso!");
+        printf("\n Dados do produto incluídos com sucesso!");
         system("pause>nul");
         system("cls || clear");
     }
@@ -45,7 +45,7 @@ void cadastroAnalista()
         fclose (arq);
         fprintf(logFile,"Cadastro de analista falhou.\n");
         fclose(logFile);
-        printf("\n Falha ao gravar dados do analista.");
+        printf("\n Falha ao gravar dados do produto.");
         system("pause>nul");
         system("cls || clear");
     }
@@ -73,7 +73,8 @@ void consultaAnalistas(){
         {
             fprintf(logFile,"Analista consultado.\n");
             fclose(logFile);
-            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+
+            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
