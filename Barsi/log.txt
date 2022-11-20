@@ -1183,3 +1183,7 @@ Menu principal aberto.
 Menu cliente aberto.
 Menu principal aberto.
 Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Não foi possivel consultar o cliente.
+Menu principal aberto.

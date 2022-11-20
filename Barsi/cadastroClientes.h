@@ -149,6 +149,8 @@ void cadastroClientes(){
 }
 void alterarClientes()
 {
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "r+b");
     if (clientef == NULL)
     {
@@ -180,6 +182,9 @@ void alterarClientes()
             fwrite(&clientes, sizeof(clientes), 1, clientef);
             fseek(clientef, sizeof(clientes) * 0, SEEK_END);
 
+            fprintf(logFile,"Alteração do cliente realizado.\n");
+            fclose(logFile);
+
             printf("\n Dados do produto alterados com sucesso!");
             system("pause>nul");
             system("cls || clear");
@@ -187,6 +192,9 @@ void alterarClientes()
     }
     if (!encontrado)
     {
+        fprintf(logFile,"Alteração do cliente falhou.\n");
+        fclose(logFile);
+
         printf("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
         system("cls || clear");
@@ -196,6 +204,8 @@ void alterarClientes()
 
 void excluirClientes()
 {
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "r+b");
     if (clientef == NULL)
     {
@@ -229,6 +239,9 @@ void excluirClientes()
                 printf("\nCliente excluido com Sucesso! \n");
                 system("pause>nul");
                 system("cls || clear");
+
+                fprintf(logFile,"Ocorreu a excludão de um cliente.\n");
+                fclose(logFile);
             }
             else if (certeza == 'n')
             {
@@ -238,6 +251,8 @@ void excluirClientes()
     }
     if (!encontrado)
     {
+        fprintf(logFile,"Cancelaram a exclusão do cliente.\n");
+        fclose(logFile);
         printf("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
         system("cls || clear");
@@ -247,6 +262,8 @@ void excluirClientes()
 
 void consultarClientes()
 {
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "rb");
     if (clientef == NULL)
     {
@@ -268,10 +285,13 @@ void consultarClientes()
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
+            fprintf(logFile,"Cliente consultado.\n");
+            fclose(logFile);
         }
     }
     if (!encontrado)
-    {
+    {   fprintf(logFile,"Não foi possivel consultar o cliente.\n");
+        fclose(logFile);
         printf("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
         system("cls || clear");
