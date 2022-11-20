@@ -19,13 +19,6 @@
 #include "cadastroAnalista.h"
 #include "menuClientes.h"
 #include "consultaCliente.h"
-<<<<<<< HEAD
-#include "consultaAnalista.h"
 
-<<<<<<< HEAD
-=======
-=======
 #include "cadastroClientes.h"
 #include "sair.h"
->>>>>>> e3e91ed4646a5bc6cb12e15476a5f8c9c1d787bf
->>>>>>> master
