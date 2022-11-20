@@ -20,6 +20,10 @@ void cadastroAnalista()
         printf("Erro ao abrir arquivo");
         return;
     }
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
+    fprintf(logFile,"Iniciou o cadastro do analista.\n");
+
     printf("Digite o código do analista: ");
     scanf("%d", &analistas.codigo);
     printf("Digite o nome do analista: ");
@@ -35,6 +39,8 @@ void cadastroAnalista()
     if (retorno == 1)
     {
         fclose (arq);
+        fprintf(logFile,"Cadastro de analista realizado.\n");
+        fclose(logFile);
         printf("\n Dados do produto incluídos com sucesso!");
         system("pause>nul");
         system("cls || clear");
@@ -42,6 +48,8 @@ void cadastroAnalista()
     else
     {
         fclose (arq);
+        fprintf(logFile,"Cadastro de analista falhou.\n");
+        fclose(logFile);
         printf("\n Falha ao gravar dados do produto.");
         system("pause>nul");
         system("cls || clear");
@@ -49,6 +57,9 @@ void cadastroAnalista()
 }
 
 void consultaAnalistas(){
+
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
     arq = fopen(arquivo, "rb");
     if (arq == NULL)
     {
@@ -65,6 +76,9 @@ void consultaAnalistas(){
     {
         if ((cod == analistas.codigo) && (analistas.deletado != '*'))
         {
+            fprintf(logFile,"Analista consultado.\n");
+            fclose(logFile);
+
             printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
             system("pause>nul");
@@ -73,6 +87,9 @@ void consultaAnalistas(){
     }
     if (!encontrado)
     {
+        fprintf(logFile,"Falha ao consultar analista.\n");
+        fclose(logFile);
+
         printf("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
         system("cls || clear");
@@ -81,6 +98,9 @@ void consultaAnalistas(){
 }
 
 void exclusaoAnalistas() {
+
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
     arq = fopen(arquivo, "r+b");
     if (arq == NULL)
     {
@@ -113,15 +133,22 @@ void exclusaoAnalistas() {
                 printf("\nAnalista excluido com sucesso! \n");
                 system("pause>nul");
                 system("cls || clear");
+
+                fprintf(logFile,"Ocorreu a excludão de um cliente.\n");
+                fclose(logFile);
             }
             else if (certeza == 'n')
             {
+                fprintf(logFile,"Cancelaram a exclusão do analista.\n");
+                fclose(logFile);
                 system("cls || clear");
             }
         }
     }
     if (!encontrado)
     {
+        fprintf(logFile,"Falha na exclusão do analista.\n");
+        fclose(logFile);
         printf ("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
         system("cls || clear");
@@ -129,6 +156,8 @@ void exclusaoAnalistas() {
     fclose(arq);
 }
 void alteracaoAnalistas() {
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
     arq = fopen(arquivo, "r+b");
     if (arq == NULL)
     {
@@ -159,6 +188,9 @@ void alteracaoAnalistas() {
             fwrite(&analistas, sizeof(analistas), 1, arq);
             fseek(arq, sizeof(analistas)* 0, SEEK_END);
 
+            fprintf(logFile,"Alteração do analista realizado.\n");
+            fclose(logFile);
+
             printf("\n Dados do analista alterados com sucesso!");
             system("pause>nul");
             system("cls || clear");
@@ -166,6 +198,9 @@ void alteracaoAnalistas() {
     }
     if (!encontrado)
     {
+        fprintf(logFile,"Alteração do analista falhou.\n");
+        fclose(logFile);
+
         printf("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
         system("cls || clear");

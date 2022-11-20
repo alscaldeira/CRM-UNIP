@@ -245,13 +245,15 @@ void excluirClientes()
             }
             else if (certeza == 'n')
             {
+                fprintf(logFile,"Exclusão de cliente cancelada.\n");
+                fclose(logFile);
                 system("cls || clear");
             }
         }
     }
     if (!encontrado)
     {
-        fprintf(logFile,"Cancelaram a exclusão do cliente.\n");
+        fprintf(logFile,"Falhou a exclusão do cliente.\n");
         fclose(logFile);
         printf("\nCodigo nao cadastrado!!\n");
         system("pause>nul");
