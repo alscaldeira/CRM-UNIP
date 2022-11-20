@@ -1123,6 +1123,8 @@ Menu principal aberto.
 Sistema encerrado.
 Menu principal aberto.
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 Menu principal aberto.
 Menu analista aberto.
@@ -1152,6 +1154,7 @@ Menu principal aberto.
 Menu analista aberto.
 Menu analista aberto.
 =======
+>>>>>>> master
 Menu analista aberto.
 Menu principal aberto.
 Menu cliente aberto.
@@ -1170,7 +1173,10 @@ Menu cliente aberto.
 Iniciou o cadastro do cliente.
 Cadastro de cliente realizado.
 Menu principal aberto.
+<<<<<<< HEAD
+=======
 >>>>>>> 3fb93d31bf7bd74bb6eac3cdff4437868eb9d0a2
+>>>>>>> master
 Menu analista aberto.
 Menu analista aberto.
 Menu principal aberto.
@@ -1178,6 +1184,8 @@ Menu cliente aberto.
 Iniciou o cadastro do cliente.
 Cadastro de cliente realizado.
 Menu principal aberto.
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 Menu cliente aberto.
 Menu principal aberto.
@@ -1189,6 +1197,7 @@ Sistema encerrado.
 Menu principal aberto.
 Sistema encerrado.
 =======
+>>>>>>> master
 Menu principal aberto.
 Menu cliente aberto.
 Menu principal aberto.
@@ -1225,6 +1234,8 @@ Menu principal aberto.
 Menu cliente aberto.
 Menu principal aberto.
 Menu cliente aberto.
+<<<<<<< HEAD
+=======
 >>>>>>> 3fb93d31bf7bd74bb6eac3cdff4437868eb9d0a2
 =======
 Sistema encerrado.
@@ -1361,3 +1372,4 @@ Iniciou o teste de perfil de investidor.
 Iniciou o teste de perfil de investidor.
 Iniciou o teste de perfil de investidor.
 >>>>>>> e3e91ed4646a5bc6cb12e15476a5f8c9c1d787bf
+>>>>>>> master

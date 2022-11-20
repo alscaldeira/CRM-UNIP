@@ -64,10 +64,13 @@ void menuClientes() {
         case 4:
             excluirClientes();
             break;
+<<<<<<< HEAD
+=======
 
         case 5:
             investidorNivel();
             break;
+>>>>>>> master
 
         default:
             menuPrincipal();
