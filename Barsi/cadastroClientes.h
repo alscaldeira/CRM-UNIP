@@ -32,7 +32,7 @@ void cadastroClientes(){
 
     //Dados pessoais
     fflush(stdin);
-    printf("Digite o codigo do cliente.");
+    printf("Digite o codigo do cliente:");
     scanf("%d",&clientes.codigo);
     fflush(stdin);
     printf("Nome: ");
@@ -166,7 +166,8 @@ void alterarClientes()
     {
         if (cod == clientes.codigo)
         {
-            printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Cod %d - Nome: %-s - CPF %-14s\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
             encontrado = 1;
 
             fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
@@ -213,6 +214,7 @@ void excluirClientes()
         if (cod == clientes.codigo)
         {
             printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Estado civil: %s - Número de dependentes: %d\n\n", clientes.estCivil, clientes.numeroDependentes );
             encontrado = 1;
 
             printf("\nTem certeza que quer excluir este cliente? s/n \n");
@@ -262,6 +264,7 @@ void consultarClientes()
         if ((cod == clientes.codigo) && (clientes.deletado != '*'))
         {
             printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
