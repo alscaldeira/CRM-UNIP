@@ -77,16 +77,18 @@
 
 1665754014 d:\unip\pim 2º semestre\code\barsi\investidornivel.h
 
-1667748380 source:d:\unip\pim 2º semestre\code\crm-unip\barsi\main.c
+1668903699 source:d:\unip\pim 2º semestre\code\crm-unip\barsi\main.c
 	"mainHeader.h"
 
-1667750681 d:\unip\pim 2º semestre\code\crm-unip\barsi\mainheader.h
+1668905844 d:\unip\pim 2º semestre\code\crm-unip\barsi\mainheader.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<conio.h>
 	<windows.h>
 	<locale.h>
+	<stdbool.h>
+	"init.h"
 	"login.h"
 	"logo.h"
 	"telaInicial.h"
@@ -100,21 +102,21 @@
 	"consultaCliente.h"
 	"consultaAnalista.h"
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\login.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\login.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\logo.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\logo.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\telainicial.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\telainicial.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\menuprincipal.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\menuprincipal.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\sair.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\sair.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\cadastroclientes.h
+1668919478 d:\unip\pim 2º semestre\code\crm-unip\barsi\cadastroclientes.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\investidornivel.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\investidornivel.h
 
-1667756353 d:\unip\pim 2º semestre\code\crm-unip\barsi\cadastroanalista.h
+1668916766 d:\unip\pim 2º semestre\code\crm-unip\barsi\cadastroanalista.h
 
 1667776227 source:c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\main.c
 	"mainHeader.h"
@@ -163,13 +165,13 @@
 
 1667775501 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\consultaanalista.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\menuclientes.h
+1668916567 d:\unip\pim 2º semestre\code\crm-unip\barsi\menuclientes.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\menuanalista.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\menuanalista.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\consultacliente.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\consultacliente.h
 
-1667746706 d:\unip\pim 2º semestre\code\crm-unip\barsi\consultaanalista.h
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\consultaanalista.h
 
 1667748237 d:\unip\pim 2º semestre\code\crm-unip\barsi\cad_anal_txt.h
 
@@ -223,4 +225,6 @@
 1668287439 c:\users\anderson\workspace\crm-unip\barsi\consultaanalista.h
 
 1668289424 c:\users\anderson\workspace\crm-unip\barsi\init.h
+
+1668903699 d:\unip\pim 2º semestre\code\crm-unip\barsi\init.h
 

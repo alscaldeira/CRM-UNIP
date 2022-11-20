@@ -1122,6 +1122,7 @@ Menu analista aberto.
 Menu principal aberto.
 Sistema encerrado.
 Menu principal aberto.
+<<<<<<< HEAD
 Menu principal aberto.
 Menu analista aberto.
 Menu analista aberto.
@@ -1149,6 +1150,26 @@ Sistema encerrado.
 Menu principal aberto.
 Menu analista aberto.
 Menu analista aberto.
+=======
+Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+>>>>>>> 3fb93d31bf7bd74bb6eac3cdff4437868eb9d0a2
 Menu analista aberto.
 Menu analista aberto.
 Menu principal aberto.
@@ -1156,6 +1177,7 @@ Menu cliente aberto.
 Iniciou o cadastro do cliente.
 Cadastro de cliente realizado.
 Menu principal aberto.
+<<<<<<< HEAD
 Menu cliente aberto.
 Menu principal aberto.
 Usuário digitou uma opção inválida pela 1º vez.
@@ -1165,3 +1187,41 @@ Menu principal aberto.
 Sistema encerrado.
 Menu principal aberto.
 Sistema encerrado.
+=======
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+>>>>>>> 3fb93d31bf7bd74bb6eac3cdff4437868eb9d0a2

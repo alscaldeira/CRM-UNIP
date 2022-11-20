@@ -1,41 +1,48 @@
+#define TAM 100
+
+typedef struct Clientes{
+    int  codigo,numeroDependentes;
+    char profissao[35], nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
+    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30],deletado;
+}clientes;
+
+char arquivoc[] = "clientes.bin";
+//clientes max [TAM];
+FILE *clientef;
+
 void cadastroClientes(){
     setlocale(LC_ALL, "Portuguese");
-
+    struct Clientes clientes;
+    int dependentes,retorno;
+    clientef = fopen(arquivoc, "ab");
+    if (clientef == NULL)
+    {
+        printf("Erro ao abrir arquivo");
+        return;
+    }
     FILE *logFile;
     logFile=fopen("log.txt", "a");
     fprintf(logFile,"Iniciou o cadastro do cliente.\n");
-        // variaveis
-    char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
-    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30];
+
     int op, op2; //op um está ligado ao sexo do cliente, já a opção dois o estado civil.
 
-    int dependentes, numeroDependentes, empregado;
-    char profissao[35], nomeEmprego[30];
-    float renda, bens;
-
-    FILE *cadastroCLIENTES;
-    if((cadastroCLIENTES = fopen("clientes.txt", "a"))==NULL){
-        printf("Falha na abertura do arquivo!");
-        fprintf(logFile,"Falha ao cadastrar cliente.\n");
-        fclose(logFile);
-        getch();
-
-        menuPrincipal();
-}
 
     system("cls");
     logo();
 
     //Dados pessoais
     fflush(stdin);
+    printf("Digite o codigo do cliente:");
+    scanf("%d",&clientes.codigo);
+    fflush(stdin);
     printf("Nome: ");
-    scanf("%[^\n]", nome);
+    scanf("%[^\n]", clientes.nome);
     fflush(stdin);
     printf("CPF: ");
-    scanf("%[^\n]", cpf);
+    scanf("%[^\n]", clientes.cpf);
     fflush(stdin);
     printf("Data de nascimento ex(24/09/2022): ");
-    scanf("%[^\n]", nascimento);
+    scanf("%[^\n]", clientes.nascimento);
 
     //sexualidade
     printf("\nSexo\n");
@@ -48,31 +55,31 @@ void cadastroClientes(){
     switch (op){
 
     case 1:
-        strcpy(sexo, "Masculino");
+        strcpy(clientes.sexo, "Masculino");
         break;
 
     case 2:
-        strcpy(sexo, "Feminino");
+        strcpy(clientes.sexo, "Feminino");
         break;
 
     case 3:
-        strcpy(sexo, "Nao definir");
+        strcpy(clientes.sexo, "Nao definir");
         break;
     }
 
     fflush(stdin);
     printf("\nNacionalidade: ");
-    scanf("%[^\n]", nacionalidade);
+    scanf("%[^\n]", clientes.nacionalidade);
     printf("\nEstado(ex:SP,RJ): ");
-    scanf("%s", uf);
+    scanf("%s", clientes.uf);
     fflush(stdin);
     printf("\nCidade: ");
-    scanf("%[^\n]", cidade);
+    scanf("%[^\n]", clientes.cidade);
     fflush(stdin);
     printf("\nEndereco: ");
-    scanf("%[^\n]", endereco);
+    scanf("%[^\n]", clientes.endereco);
     printf("\nEmail: ");
-    scanf("%s", email);
+    scanf("%s", clientes.email);
 
     //estado cívil
     printf("\nEstado civil: \n");
@@ -85,19 +92,19 @@ void cadastroClientes(){
 
     switch (op2){
     case 1:
-        strcpy(estCivil, "Casado/a");
+        strcpy(clientes.estCivil, "Casado/a");
         break;
 
     case 2:
-        strcpy(estCivil, "Solteiro/a");
+        strcpy(clientes.estCivil, "Solteiro/a");
         break;
 
     case 3:
-        strcpy(estCivil, "União estavel");
+        strcpy(clientes.estCivil, "União estavel");
         break;
 
     case 4:
-        strcpy(estCivil, "Viuvo/a");
+        strcpy(clientes.estCivil, "Viuvo/a");
         ;
         break;
     }
@@ -111,52 +118,163 @@ void cadastroClientes(){
 
     if (dependentes == 1){
         printf("Numeros de dependestes: ");
-        scanf("%d", &numeroDependentes);
+        scanf("%d", &clientes.numeroDependentes);
     } else {
-        numeroDependentes = 0;
-    }
-
-    fflush(stdin);
-    printf("\nValor em bens que voce possui: ");
-    scanf("%f", &bens);
-    fflush(stdin);
-    printf("\nQual a sua profissao? ");
-    scanf("%[^\n]", profissao);
-    printf("\nEsta empregado no momento?\n");
-    printf("1 -- Sim\n");
-    printf("2 -- Nao\n");
-    printf("Digite uma opcao valida: ");
-    scanf("%d", &empregado);
-
-    if (empregado == 1){
-        fflush(stdin);
-        printf("\nQual o nome da empresa em que esta empregado? ");
-        scanf("%[^\n]", nomeEmprego);
-    } else {
-        strcpy(nomeEmprego, "Desempregado/a");
-    }
-    if (empregado != 1){
-        renda=0.00;
-    } else {
-        printf("\nQual a sua renda mensal: ");
-        scanf("%f", &renda);
+        clientes.numeroDependentes = 0;
     }
 
 
+    retorno = fwrite (&clientes, sizeof(clientes), 1, clientef);
 
-    fprintf(cadastroCLIENTES,"Nome:%s\nCPF:%s\nNascimento:%s\nSexo:%s\nNacionalidade:%s\nUF:%s\nCidade:%s",nome,cpf,nascimento,sexo,nacionalidade,uf,cidade);
-    fprintf(cadastroCLIENTES,"\nEndereco:%s\nEmail:%s\nEstado civil:%s\nNumero de dependetes:%d\nProfissão:%s\n",endereco,email,estCivil,numeroDependentes,profissao);
-    fprintf(cadastroCLIENTES,"Nome da empresa atual:%s\nRenda Mensal:%2.f\nValor em bens:%2.f\n\n",nomeEmprego,renda,bens);
+    if (retorno == 1)
+    {
+        fclose (clientef);
+        fprintf(logFile,"Cadastro de cliente realizado.\n");
+        fclose(logFile);
+        printf("\n Dados do cliente incluídos com sucesso!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    else
+    {
+        fprintf(logFile,"Cadastro de cliente com erro.\n");
+        fclose(logFile);
+        fclose (clientef);
+        printf("\n Falha ao gravar dados do cliente.");
+        system("pause>nul");
+        system("cls || clear");
+    }
 
-    fclose(cadastroCLIENTES);
-    printf ("\n\nCadastro realizado com sucesso!!");
-    //Abertura do log para registrar o cadastro realizado. Carlos
-    fprintf(logFile,"Cadastro de cliente realizado.\n");
-    fclose(logFile);
 
-    getch();
+}
+void alterarClientes()
+{
+    clientef = fopen(arquivoc, "r+b");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
 
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    printf("\nDigite o codigo que deseja alterar: \n");
+    scanf("%d", &cod);
 
-    menuPrincipal();
+    while (fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if (cod == clientes.codigo)
+        {
+            printf("Cod %d - Nome: %-s - CPF %-14s\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
+            encontrado = 1;
+
+            fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
+            printf("\nDigite um novo estado civil: \n");
+            fflush(stdin);
+            gets(clientes.estCivil);
+            printf("\nDigite o novo numero de dependentes: \n");
+            scanf("%d", &clientes.numeroDependentes);
+
+            fwrite(&clientes, sizeof(clientes), 1, clientef);
+            fseek(clientef, sizeof(clientes) * 0, SEEK_END);
+
+            printf("\n Dados do produto alterados com sucesso!");
+            system("pause>nul");
+            system("cls || clear");
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
 }
 
+void excluirClientes()
+{
+    clientef = fopen(arquivoc, "r+b");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    char certeza;
+    printf("\nDigite o codigo que deseja EXCLUIR: \n");
+    scanf("%d", &cod);
+
+    while(fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if (cod == clientes.codigo)
+        {
+            printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Estado civil: %s - Número de dependentes: %d\n\n", clientes.estCivil, clientes.numeroDependentes );
+            encontrado = 1;
+
+            printf("\nTem certeza que quer excluir este cliente? s/n \n");
+            fflush(stdin);
+            scanf("%c", &certeza);
+            if (certeza == 's')
+            {
+                clientes.deletado = '*';
+                fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
+                fwrite(&clientes, sizeof(clientes), 1, clientef);
+                fseek(clientef, sizeof(clientes) * 0, SEEK_END);
+                printf("\nCliente excluido com Sucesso! \n");
+                system("pause>nul");
+                system("cls || clear");
+            }
+            else if (certeza == 'n')
+            {
+                system("cls || clear");
+            }
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
+}
+
+void consultarClientes()
+{
+    clientef = fopen(arquivoc, "rb");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    printf("\nDigite o codigo que procura: \n");
+    scanf("%d", &cod);
+
+    while (fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if ((cod == clientes.codigo) && (clientes.deletado != '*'))
+        {
+            printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
+            encontrado = 1;
+            system("pause>nul");
+            system("cls || clear");
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
+}
