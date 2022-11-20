@@ -18,7 +18,6 @@
 #include "consultaAnalista.h"
 #include "cadastroAnalista.h"
 #include "menuClientes.h"
-#include "consultaCliente.h"
 
 #include "cadastroClientes.h"
 #include "sair.h"
