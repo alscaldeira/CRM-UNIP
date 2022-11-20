@@ -3,13 +3,24 @@
 #define SPACE 32    // CÓDIGO ASCII DA TECLA BARRA DE ESPACO
 #define TAB 9       // CÓDIGO ASCII DA TECLA TAB
 #define ESC 27      // CÓDIGO ASCII DA TECLA ESC
+#define TAM 100
+
+typedef struct Analista{
+    int codigo;
+    char nome[30],senha[30],cpf[11];
+    char deletado;
+} analistas;
 
 void login() {
+    char arquivo[] = "analista.bin";
+    analistas max[TAM];
+    FILE *arq;
+
 
     char ch = '\0';
     char user[15] = "esc";
     char loginUser[15];
-    char senha[15] = "123";
+    //char senha[15] = "123";
     char loginSenha[15];
     int permissao = 0;
     int ctecla = 0;
@@ -18,17 +29,44 @@ void login() {
     memset(loginSenha, '\0', sizeof(loginSenha));
 
     for(int cont = 1; cont <= 3; cont++){
+
         system("cls");
 
         logo();
-
         printf("\nTentativa %d de 3\n\n", cont);
 
-        printf("Usuário: ");
-        scanf("%s", loginUser);
+        arq = fopen(arquivo, "rb");
+        if (arq == NULL)
+        {
+            printf("Arquivo inexistente!");
+            system("pause>nul");
+            system("cls || clear");
+        }
+        struct Analista analistas;
+        int cod, encontrado = 0;
+        printf ("\nCódigo do Analista: ");
+        scanf ("%d", &cod);
+
+        while (fread (&analistas, sizeof(analistas), 1, arq))
+        {
+            if ((cod == analistas.codigo) && (analistas.deletado != '*'))
+            {
+                encontrado = 1;
+            }
+        }
+        if (!encontrado)
+        {
+            printf("\nCodigo nao cadastrado!!\n");
+            system("pause>nul");
+            system("cls || clear");
+        }
+
+
+
+        fclose(arq);
 
         printf("Senha: ");
-        while(ctecla < 3){
+        while(ctecla < 5){
 
             ch = getch();
 
@@ -66,24 +104,14 @@ void login() {
 
         ctecla = 0;
 
-        if(strcmp(user, loginUser) == 0 && strcmp(senha, loginSenha) == 0) {
+        if(strcmp(analistas.senha, loginSenha) == 0) {
             permissao = 1;
             break;
 
-        } else if(strcmp(user, loginUser) != 0 && strcmp(senha, loginSenha) == 0){
-            printf("\nUsuário não existe!!!!!\n");
-            getch();
-
-        } else if(strcmp(user, loginUser) == 0 && strcmp(senha, loginSenha) != 0){
+        } else {
             printf("\nSenha incorreta!!!!!\n");
             getch();
-
-        } else if(strcmp(user, loginUser) != 0 && strcmp(senha, loginSenha) != 0){
-            printf("\nDados incorretos!!!!!\n");
-            getch();
-
         }
-
     }
 
     if(permissao == 1){

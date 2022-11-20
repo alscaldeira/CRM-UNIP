@@ -4,7 +4,7 @@ int main() {
 
     init();
 
-    menuPrincipal();
+    login();
 
     return 0;
 }

@@ -1121,3 +1121,110 @@ Menu analista aberto.
 Menu analista aberto.
 Menu principal aberto.
 Sistema encerrado.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Sistema encerrado.
+Login recusado, limite de tentativas excedidas.
+Sistema encerrado.
+Menu analista aberto.
+Menu analista aberto.
+Usuário digitou uma opção inválida pela 1º vez.
+Menu analista aberto.
+Usuário digitou uma opção inválida pela 2º vez.
+Menu analista aberto.
+Usuário digitou uma opção inválida pela 3º vez.
+Software será fechado devido à quantidade de erros excessivos de entrada.Iniciou o consulta do analista.
+Menu analista aberto.
+Usuário digitou uma opção inválida pela 1º vez.
+Menu analista aberto.
+Usuário digitou uma opção inválida pela 2º vez.
+Menu analista aberto.
+Usuário digitou uma opção inválida pela 3º vez.
+Software será fechado devido à quantidade de erros excessivos de entrada.Iniciou o consulta do analista.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Menu analista aberto.
+Login recusado, limite de tentativas excedidas.
+Sistema encerrado.
+Login realizado com sucesso por .
+Menu principal aberto.
+Login realizado com sucesso por .
+Menu principal aberto.

@@ -1,10 +1,5 @@
 #define TAM 100
 
-typedef struct Analista{
-    int codigo;
-    char nome[30],senha[30],cpf[11];
-    char deletado;
-} analistas;
 
 char arquivo[] = "analista.bin";
 analistas max[TAM];
