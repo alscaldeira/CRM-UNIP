@@ -1,9 +1,9 @@
-#define TAM 400
+#define TAM 100
 
 typedef struct Clientes{
     int  codigo,numeroDependentes;
     char profissao[35], nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
-    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30];;
+    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30],deletado;
 }clientes;
 
 char arquivoc[] = "clientes.bin";
@@ -34,6 +34,7 @@ void cadastroClientes(){
     fflush(stdin);
     printf("Digite o codigo do cliente.");
     scanf("%d",&clientes.codigo);
+    fflush(stdin);
     printf("Nome: ");
     scanf("%[^\n]", clientes.nome);
     fflush(stdin);
@@ -146,4 +147,131 @@ void cadastroClientes(){
 
 
 }
+void alterarClientes()
+{
+    clientef = fopen(arquivoc, "r+b");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
 
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    printf("\nDigite o codigo que deseja alterar: \n");
+    scanf("%d", &cod);
+
+    while (fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if (cod == clientes.codigo)
+        {
+            printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            encontrado = 1;
+
+            fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
+            printf("\nDigite um novo estado civil: \n");
+            fflush(stdin);
+            gets(clientes.estCivil);
+            printf("\nDigite o novo numero de dependentes: \n");
+            scanf("%d", &clientes.numeroDependentes);
+
+            fwrite(&clientes, sizeof(clientes), 1, clientef);
+            fseek(clientef, sizeof(clientes) * 0, SEEK_END);
+
+            printf("\n Dados do produto alterados com sucesso!");
+            system("pause>nul");
+            system("cls || clear");
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
+}
+
+void excluirClientes()
+{
+    clientef = fopen(arquivoc, "r+b");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    char certeza;
+    printf("\nDigite o codigo que deseja EXCLUIR: \n");
+    scanf("%d", &cod);
+
+    while(fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if (cod == clientes.codigo)
+        {
+            printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            encontrado = 1;
+
+            printf("\nTem certeza que quer excluir este cliente? s/n \n");
+            fflush(stdin);
+            scanf("%c", &certeza);
+            if (certeza == 's')
+            {
+                clientes.deletado = '*';
+                fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
+                fwrite(&clientes, sizeof(clientes), 1, clientef);
+                fseek(clientef, sizeof(clientes) * 0, SEEK_END);
+                printf("\nCliente excluido com Sucesso! \n");
+                system("pause>nul");
+                system("cls || clear");
+            }
+            else if (certeza == 'n')
+            {
+                system("cls || clear");
+            }
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
+}
+
+void consultarClientes()
+{
+    clientef = fopen(arquivoc, "rb");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    printf("\nDigite o codigo que procura: \n");
+    scanf("%d", &cod);
+
+    while (fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if ((cod == clientes.codigo) && (clientes.deletado != '*'))
+        {
+            printf("Cod %d - Nome: %-15s - CPF %-14s\n\n", clientes.codigo, clientes.nome, clientes.cpf);
+            encontrado = 1;
+            system("pause>nul");
+            system("cls || clear");
+        }
+    }
+    if (!encontrado)
+    {
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
+}
