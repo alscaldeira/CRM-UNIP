@@ -43,10 +43,10 @@
 
 1665602277 c:\users\emers\onedrive\documentos\estudo\codeblocks\barsi\sair.h
 
-1665715570 source:d:\unip\pim 2บ semestre\code\barsi\main.c
+1665715570 source:d:\unip\pim 2ยบ semestre\code\barsi\main.c
 	"mainHeader.h"
 
-1665753804 d:\unip\pim 2บ semestre\code\barsi\mainheader.h
+1665753804 d:\unip\pim 2ยบ semestre\code\barsi\mainheader.h
 	"windows.h"
 	<stdio.h>
 	<string.h>
@@ -60,27 +60,27 @@
 	"cadastroClientes.h"
 	"investidorNivel.h"
 
-1665752918 d:\unip\pim 2บ semestre\code\barsi\login.h
+1665752918 d:\unip\pim 2ยบ semestre\code\barsi\login.h
 	"abreLog.h"
 
-1665612000 d:\unip\pim 2บ semestre\code\barsi\logo.h
+1665612000 d:\unip\pim 2ยบ semestre\code\barsi\logo.h
 
-1665610318 d:\unip\pim 2บ semestre\code\barsi\telainicial.h
+1665610318 d:\unip\pim 2ยบ semestre\code\barsi\telainicial.h
 
-1665754006 d:\unip\pim 2บ semestre\code\barsi\menuprincipal.h
+1665754006 d:\unip\pim 2ยบ semestre\code\barsi\menuprincipal.h
 
-1665753201 d:\unip\pim 2บ semestre\code\barsi\sair.h
+1665753201 d:\unip\pim 2ยบ semestre\code\barsi\sair.h
 
-1665754006 d:\unip\pim 2บ semestre\code\barsi\cadastroclientes.h
+1665754006 d:\unip\pim 2ยบ semestre\code\barsi\cadastroclientes.h
 
-1665753556 d:\unip\pim 2บ semestre\code\barsi\abrelog.h
+1665753556 d:\unip\pim 2ยบ semestre\code\barsi\abrelog.h
 
-1665754014 d:\unip\pim 2บ semestre\code\barsi\investidornivel.h
+1665754014 d:\unip\pim 2ยบ semestre\code\barsi\investidornivel.h
 
-1668903699 source:d:\unip\pim 2บ semestre\code\crm-unip\barsi\main.c
+1668903699 source:d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\main.c
 	"mainHeader.h"
 
-1668905844 d:\unip\pim 2บ semestre\code\crm-unip\barsi\mainheader.h
+1668905844 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\mainheader.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -102,78 +102,88 @@
 	"consultaCliente.h"
 	"consultaAnalista.h"
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\login.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\login.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\logo.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\logo.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\telainicial.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\telainicial.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuprincipal.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\menuprincipal.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\sair.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\sair.h
 
-1668919478 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroclientes.h
+1668903699 D
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\investidornivel.h
+1668973796 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroclientes.h
 
-1668916766 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroanalista.h
+1668919478 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\cadastroclientes.h
 
-1667776227 source:c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\main.c
+1668919478 16530d44a3a35b7a9ccc5085525266255b9a0
+
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\investidornivel.h
+
+1668916766 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\cadastroanalista.h
+
+1668914782 source:c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\main.c
 	"mainHeader.h"
 
-1667776209 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\mainheader.h
+1668913251 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\mainheader.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<conio.h>
 	<windows.h>
 	<locale.h>
-	"login.h"
+	<stdbool.h>
+	"init.h"
 	"logo.h"
 	"telaInicial.h"
+	"login.h"
+	"loginAnalista.h"
 	"menuPrincipal.h"
-	"sair.h"
-	"cadastroClientes.h"
+	"menuPrincipalAnalista.h"
 	"investidorNivel.h"
+	"menuAnalista.h"
+	"consultaAnalista.h"
 	"cadastroAnalista.h"
 	"menuClientes.h"
-	"menuAnalista.h"
 	"consultaCliente.h"
-	"consultaAnalista.h"
+	"cadastroClientes.h"
+	"sair.h"
 
-1667775456 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\login.h
+1668912717 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\login.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\logo.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\logo.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\telainicial.h
+1668913383 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\telainicial.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipal.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipal.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\sair.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\sair.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroclientes.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroclientes.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\investidornivel.h
+1668916244 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\investidornivel.h
 
-1667776171 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroanalista.h
+1668907395 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroanalista.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuclientes.h
+1668916649 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuclientes.h
 
-1667776269 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuanalista.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuanalista.h
 
-1667758119 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\consultacliente.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\consultacliente.h
 
-1667775501 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\consultaanalista.h
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\consultaanalista.h
 
-1668916567 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuclientes.h
+1668916567 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\menuclientes.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuanalista.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\menuanalista.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\consultacliente.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\consultacliente.h
 
-1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\consultaanalista.h
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\consultaanalista.h
 
-1667748237 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cad_anal_txt.h
+1667748237 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\cad_anal_txt.h
 
 1668349064 source:c:\users\anderson\workspace\crm-unip\barsi\main.c
 	"mainHeader.h"
@@ -226,5 +236,63 @@
 
 1668289424 c:\users\anderson\workspace\crm-unip\barsi\init.h
 
+1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\init.h
+
+1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\init.h
+
+1668913327 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\loginanalista.h
+
+1668913283 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipalanalista.h
+
+1668978251 source:d:\unip\pim 2บ semestre\code\crm-unip\barsi\main.c
+	"mainHeader.h"
+
+1668977005 d:\unip\pim 2บ semestre\code\crm-unip\barsi\mainheader.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<locale.h>
+	<stdbool.h>
+	"init.h"
+	"logo.h"
+	"telaInicial.h"
+	"login.h"
+	"loginAnalista.h"
+	"menuPrincipal.h"
+	"menuPrincipalAnalista.h"
+	"investidorNivel.h"
+	"menuAnalista.h"
+	"consultaAnalista.h"
+	"cadastroAnalista.h"
+	"menuClientes.h"
+	"cadastroClientes.h"
+	"sair.h"
+
 1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\init.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\logo.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\telainicial.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\login.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\loginanalista.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuprincipal.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuprincipalanalista.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\investidornivel.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuanalista.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\consultaanalista.h
+
+1668976991 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroanalista.h
+
+1668978326 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuclientes.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\sair.h
 

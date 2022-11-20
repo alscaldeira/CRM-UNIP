@@ -1,6 +1,6 @@
 
 void menuClientes() {
-    setlocale(LC_ALL, "Portuguese");
+    //setlocale(LC_ALL, "Portuguese");
 
     int saida;
 
@@ -21,19 +21,21 @@ void menuClientes() {
         printf("2 --- Alterar cliente\n");
         printf("3 --- Consultar cliente\n");
         printf("4 --- Excluir cliente\n");
-        printf("5 --- Retornar ao menu\n");
-        printf("Digite uma opção: ");
+        printf("5 --- Investidor nivel\n");
+        printf("6 --- Retornar ao menu\n");
+
+        printf("Digite uma opcao: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida < 1 || saida <= 5){
+        if(saida < 1 || saida <= 6){
             break;
         } else {
-            printf("Opção invalida, por favor digite uma opção válida!\n\n\n");
-            //Carlos - Acrescentei o registro do log caso o usuário tenha digitado uma opção invalida.
+            printf("OpÃ§Ã£o invalida, por favor digite uma opÃ§Ã£o vÃ¡lida!\n\n\n");
+            //Carlos - Acrescentei o registro do log caso o usuÃ¡rio tenha digitado uma opÃ§Ã£o invalida.
             FILE *logFile;
             logFile=fopen("log.txt", "a");
-            fprintf(logFile,"Usuário digitou uma opção invalida.\n");
+            fprintf(logFile,"UsuÃ¡rio digitou uma opÃ§Ã£o invalida.\n");
             fclose(logFile);
             system("pause");
         }
@@ -54,6 +56,10 @@ void menuClientes() {
 
         case 4:
             excluirClientes();
+            break;
+
+        case 5:
+            investidorNivel();
             break;
 
         default:

@@ -4,7 +4,7 @@ int main() {
 
     init();
 
-    menuPrincipal();
+    investidorNivel();
 
     return 0;
 }

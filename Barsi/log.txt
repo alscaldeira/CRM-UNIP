@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Menu analista aberto.
 Iniciou o consulta do analista.
 Iniciou o consulta do analista.
@@ -1122,106 +1123,107 @@ Menu analista aberto.
 Menu principal aberto.
 Sistema encerrado.
 Menu principal aberto.
-<<<<<<< HEAD
+Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
 Menu principal aberto.
 Menu analista aberto.
 Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu principal aberto.
-Sistema encerrado.
 Menu principal aberto.
 Menu analista aberto.
 Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
 Menu principal aberto.
-Sistema encerrado.
+Menu cliente aberto.
 Menu principal aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu analista aberto.
-Menu principal aberto.
-Sistema encerrado.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
 Menu principal aberto.
 Menu analista aberto.
 Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Não foi possivel consultar o cliente.
+Menu principal aberto.
 =======
-Menu analista aberto.
+
+>>>>>>> f7416530d44a3a35b7a9ccc5085525266255b9a0
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
 Menu principal aberto.
 Menu cliente aberto.
 Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu principal aberto.
+Menu principal aberto.
+Iniciou o teste de perfil de investidor.
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
 Menu cliente aberto.
 Menu principal aberto.
 Menu analista aberto.
-Menu analista aberto.
-Menu principal aberto.
-Menu analista aberto.
-Menu analista aberto.
 Menu principal aberto.
 Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Iniciou o cadastro do cliente.
-Cadastro de cliente realizado.
-Menu principal aberto.
->>>>>>> 3fb93d31bf7bd74bb6eac3cdff4437868eb9d0a2
-Menu analista aberto.
-Menu analista aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Iniciou o cadastro do cliente.
-Cadastro de cliente realizado.
-Menu principal aberto.
-<<<<<<< HEAD
-Menu cliente aberto.
-Menu principal aberto.
-Usuário digitou uma opção inválida pela 1º vez.
 Menu principal aberto.
 Sistema encerrado.
 Menu principal aberto.
 Sistema encerrado.
 Menu principal aberto.
 Sistema encerrado.
-=======
 Menu principal aberto.
-Menu cliente aberto.
+Login recusado, limite de tentativas excedidas.
+Sistema encerrado.
 Menu principal aberto.
-Menu cliente aberto.
+Login recusado, limite de tentativas excedidas.
+Sistema encerrado.
 Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Iniciou o cadastro do cliente.
-Cadastro de cliente realizado.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Iniciou o cadastro do cliente.
-Cadastro de cliente realizado.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
-Menu principal aberto.
-Menu cliente aberto.
->>>>>>> 3fb93d31bf7bd74bb6eac3cdff4437868eb9d0a2

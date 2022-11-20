@@ -7,16 +7,17 @@
 #include <stdbool.h>
 
 #include "init.h"
-#include "login.h"
 #include "logo.h"
 #include "telaInicial.h"
+#include "login.h"
+#include "loginAnalista.h"
 #include "menuPrincipal.h"
-#include "sair.h"
-#include "cadastroClientes.h"
+#include "menuPrincipalAnalista.h"
 #include "investidorNivel.h"
+#include "menuAnalista.h"
+#include "consultaAnalista.h"
 #include "cadastroAnalista.h"
 #include "menuClientes.h"
-#include "menuAnalista.h"
-#include "consultaCliente.h"
-#include "consultaAnalista.h"
 
+#include "cadastroClientes.h"
+#include "sair.h"
