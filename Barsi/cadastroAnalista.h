@@ -1,10 +1,5 @@
 #define TAM 100
 
-typedef struct Analista{
-    int codigo;
-    char nome[30],senha[30],cpf[11];
-    char deletado;
-} analistas;
 
 char arquivo[] = "analista.bin";
 analistas max[TAM];
@@ -41,7 +36,7 @@ void cadastroAnalista()
         fclose (arq);
         fprintf(logFile,"Cadastro de analista realizado.\n");
         fclose(logFile);
-        printf("\n Dados do produto incluídos com sucesso!");
+        printf("\n Dados do analista incluídos com sucesso!");
         system("pause>nul");
         system("cls || clear");
     }
@@ -50,7 +45,7 @@ void cadastroAnalista()
         fclose (arq);
         fprintf(logFile,"Cadastro de analista falhou.\n");
         fclose(logFile);
-        printf("\n Falha ao gravar dados do produto.");
+        printf("\n Falha ao gravar dados do analista.");
         system("pause>nul");
         system("cls || clear");
     }
@@ -78,8 +73,7 @@ void consultaAnalistas(){
         {
             fprintf(logFile,"Analista consultado.\n");
             fclose(logFile);
-
-            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
@@ -118,7 +112,7 @@ void exclusaoAnalistas() {
     {
         if (cod == analistas.codigo)
         {
-            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
 
             printf("\nTem certeza que quer excluir este analista? s/n \n");
@@ -168,22 +162,22 @@ void alteracaoAnalistas() {
 
     struct Analista analistas;
     int cod, encontrado = 0;
-    printf ("\nDigite o codigo que deseja alterar: \n");
+    printf ("\nDigite o codigo que deseja alterar: ");
     scanf ("%d", &cod);
 
     while (fread (&analistas, sizeof(analistas), 1, arq))
     {
         if (cod == analistas.codigo)
         {
-            printf("Código: %d; Nome: %s; CPF: R$ %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
 
             fseek(arq,sizeof(struct Analista)*-1, SEEK_CUR);
-            printf("\nDigite um novo nome: \n");
+            printf("\nDigite um novo nome: ");
             fflush(stdin);
             gets(analistas.nome);
-            printf("\nDigite o novo cpf....: \n");
-            scanf("%f", &analistas.cpf);
+            printf("\nDigite o novo cpf: ");
+            scanf("%s", &analistas.cpf);
 
             fwrite(&analistas, sizeof(analistas), 1, arq);
             fseek(arq, sizeof(analistas)* 0, SEEK_END);

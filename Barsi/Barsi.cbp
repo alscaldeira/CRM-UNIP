@@ -38,6 +38,7 @@
 		<Unit filename="init.h" />
 		<Unit filename="investidorNivel.h" />
 		<Unit filename="login.h" />
+		<Unit filename="loginAnalista.h" />
 		<Unit filename="logo.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
@@ -46,6 +47,7 @@
 		<Unit filename="menuAnalista.h" />
 		<Unit filename="menuClientes.h" />
 		<Unit filename="menuPrincipal.h" />
+		<Unit filename="menuPrincipalAnalista.h" />
 		<Unit filename="sair.h" />
 		<Unit filename="telaInicial.h" />
 		<Extensions />
