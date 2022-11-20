@@ -116,10 +116,10 @@
 
 1667756353 d:\unip\pim 2º semestre\code\crm-unip\barsi\cadastroanalista.h
 
-1668908423 source:c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\main.c
+1668914782 source:c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\main.c
 	"mainHeader.h"
 
-1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\mainheader.h
+1668913251 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\mainheader.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -128,24 +128,26 @@
 	<locale.h>
 	<stdbool.h>
 	"init.h"
-	"login.h"
 	"logo.h"
 	"telaInicial.h"
+	"login.h"
+	"loginAnalista.h"
 	"menuPrincipal.h"
-	"sair.h"
-	"cadastroClientes.h"
+	"menuPrincipalAnalista.h"
 	"investidorNivel.h"
+	"menuAnalista.h"
+	"consultaAnalista.h"
 	"cadastroAnalista.h"
 	"menuClientes.h"
-	"menuAnalista.h"
 	"consultaCliente.h"
-	"consultaAnalista.h"
+	"cadastroClientes.h"
+	"sair.h"
 
-1668909179 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\login.h
+1668912717 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\login.h
 
 1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\logo.h
 
-1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\telainicial.h
+1668913383 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\telainicial.h
 
 1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipal.h
 
@@ -153,11 +155,11 @@
 
 1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroclientes.h
 
-1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\investidornivel.h
+1668916244 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\investidornivel.h
 
 1668907395 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\cadastroanalista.h
 
-1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuclientes.h
+1668916649 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuclientes.h
 
 1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuanalista.h
 
@@ -227,4 +229,8 @@
 1668289424 c:\users\anderson\workspace\crm-unip\barsi\init.h
 
 1668906991 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\init.h
+
+1668913327 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\loginanalista.h
+
+1668913283 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipalanalista.h
 
