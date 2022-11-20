@@ -18,22 +18,23 @@ void menuClientes() {
         printf("Qual opcao deseja:\n");
         printf("------------------------------------------------------\n");
         printf("1 --- Incluir cliente\n");
-        /*printf("2 --- Alterar cliente\n");
+        printf("2 --- Alterar cliente\n");
         printf("3 --- Consultar cliente\n");
-        printf("4 --- Excluir cliente\n");*/
+        printf("4 --- Excluir cliente\n");
         printf("5 --- Retornar ao menu\n");
-        printf("Digite uma opção: ");
+
+        printf("Digite uma opÃ§Ã£o: ");
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida < 1 || saida <= 5){
+        if(saida < 1 || saida <= 6){
             break;
         } else {
-            printf("Opção invalida, por favor digite uma opção válida!\n\n\n");
-            //Carlos - Acrescentei o registro do log caso o usuário tenha digitado uma opção invalida.
+            printf("OpÃ§Ã£o invalida, por favor digite uma opÃ§Ã£o vÃ¡lida!\n\n\n");
+            //Carlos - Acrescentei o registro do log caso o usuÃ¡rio tenha digitado uma opÃ§Ã£o invalida.
             FILE *logFile;
             logFile=fopen("log.txt", "a");
-            fprintf(logFile,"Usuário digitou uma opção invalida.\n");
+            fprintf(logFile,"UsuÃ¡rio digitou uma opÃ§Ã£o invalida.\n");
             fclose(logFile);
             system("pause");
         }
@@ -44,7 +45,7 @@ void menuClientes() {
             cadastroClientes();
             break;
 
-       /* case 2:
+        case 2:
             alterarClientes();
             break;
 
@@ -54,7 +55,11 @@ void menuClientes() {
 
         case 4:
             excluirClientes();
-            break; */
+            break;
+
+        case 5:
+            investidorNivel();
+            break;
 
         default:
             menuPrincipal();
