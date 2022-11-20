@@ -1193,3 +1193,37 @@ Menu principal aberto.
 >>>>>>> f7416530d44a3a35b7a9ccc5085525266255b9a0
 Iniciou o teste de perfil de investidor.
 Menu principal aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu principal aberto.
+Menu principal aberto.
+Iniciou o teste de perfil de investidor.
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o teste de perfil de investidor.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Sistema encerrado.
+Menu principal aberto.
+Login recusado, limite de tentativas excedidas.
+Sistema encerrado.
+Menu principal aberto.
+Login recusado, limite de tentativas excedidas.
+Sistema encerrado.
+Menu principal aberto.

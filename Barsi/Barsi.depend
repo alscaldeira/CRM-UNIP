@@ -112,11 +112,13 @@
 
 1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\sair.h
 
-<<<<<<< HEAD
-1668972150 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroclientes.h
-=======
+1668903699 D
+
+1668973796 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroclientes.h
+
 1668919478 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\cadastroclientes.h
->>>>>>> f7416530d44a3a35b7a9ccc5085525266255b9a0
+
+1668919478 16530d44a3a35b7a9ccc5085525266255b9a0
 
 1668903699 d:\unip\pim 2ยบ semestre\code\crm-unip\barsi\investidornivel.h
 
@@ -241,3 +243,56 @@
 1668913327 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\loginanalista.h
 
 1668913283 c:\users\emers\onedrive\documentos\estudo\pim\crm-unip\barsi\menuprincipalanalista.h
+
+1668978251 source:d:\unip\pim 2บ semestre\code\crm-unip\barsi\main.c
+	"mainHeader.h"
+
+1668977005 d:\unip\pim 2บ semestre\code\crm-unip\barsi\mainheader.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<locale.h>
+	<stdbool.h>
+	"init.h"
+	"logo.h"
+	"telaInicial.h"
+	"login.h"
+	"loginAnalista.h"
+	"menuPrincipal.h"
+	"menuPrincipalAnalista.h"
+	"investidorNivel.h"
+	"menuAnalista.h"
+	"consultaAnalista.h"
+	"cadastroAnalista.h"
+	"menuClientes.h"
+	"cadastroClientes.h"
+	"sair.h"
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\init.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\logo.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\telainicial.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\login.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\loginanalista.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuprincipal.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuprincipalanalista.h
+
+1668976802 d:\unip\pim 2บ semestre\code\crm-unip\barsi\investidornivel.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuanalista.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\consultaanalista.h
+
+1668976991 d:\unip\pim 2บ semestre\code\crm-unip\barsi\cadastroanalista.h
+
+1668978326 d:\unip\pim 2บ semestre\code\crm-unip\barsi\menuclientes.h
+
+1668903699 d:\unip\pim 2บ semestre\code\crm-unip\barsi\sair.h
+
