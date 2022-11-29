@@ -518,3 +518,99 @@ Menu principal aberto.
 Menu cliente aberto.
 Menu principal aberto.
 Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Alteração do cliente realizada.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Alteração do cliente falhou.
+Menu cliente aberto.
+Alteração do cliente falhou.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Alteração do cliente falhou.
+Menu cliente aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu analista aberto.
+Iniciou o cadastro do analista.
+O cadastro de analista foi realizado.
+Menu analista aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login recusado, pois o limite de tentativas foi excedido.
+Sistema encerrado.
+Login recusado, pois o limite de tentativas foi excedido.
+Sistema encerrado.
+Login recusado, pois o limite de tentativas foi excedido.
+Sistema encerrado.
+Sistema encerrado.
+Login realizado com sucesso por .
+Menu principal do analista aberto.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Sistema encerrado.
+Login realizado com sucesso por .
+Menu principal do analista aberto.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Sistema encerrado.
+Login realizado com sucesso por .
+Menu principal do analista aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo conservador.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Menu cliente aberto.
+Menu principal do analista aberto.
+Sistema encerrado.

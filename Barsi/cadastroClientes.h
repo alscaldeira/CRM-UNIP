@@ -8,7 +8,7 @@
 typedef struct Clientes{
     int  codigo,numeroDependentes;
     char profissao[35], nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
-    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30],deletado;
+    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30],deletado, nivel[30];
 }clientes;
 
 char arquivoc[] = "clientes.bin";
@@ -39,7 +39,7 @@ void cadastroClientes(){
 
     //Dados pessoais
     fflush(stdin);
-    printf("Digite o código do cliente:");
+    printf("Digite o código do cliente: ");
     scanf("%d",&clientes.codigo);
     fflush(stdin);
     printf("Nome: ");
@@ -205,22 +205,22 @@ void alterarClientes()
 
     struct Clientes clientes;
     int cod, encontrado = 0;
-    printf("\nDigite o código que deseja alterar: \n");
+    printf("\nDigite o código que deseja alterar: ");
     scanf("%d", &cod);
 
     while (fread(&clientes, sizeof(clientes), 1, clientef))
     {
         if (cod == clientes.codigo)
         {
-            printf("Cod %d - Nome: %-s - CPF %-14s\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("\nCod %d - Nome: %-s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
             printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
             encontrado = 1;
 
             fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
-            printf("\nDigite um novo estado civil: \n");
+            printf("\nDigite um novo estado civil: ");
             fflush(stdin);
             gets(clientes.estCivil);
-            printf("\nDigite o novo número de dependentes: \n");
+            printf("\nDigite o novo número de dependentes: ");
             scanf("%d", &clientes.numeroDependentes);
 
             fwrite(&clientes, sizeof(clientes), 1, clientef);
@@ -229,14 +229,14 @@ void alterarClientes()
             fprintf(logFile,"Alteração do cliente realizada.\n");
             fclose(logFile);
 
-            printf("\n Dados do produto alterados com sucesso!");
+            printf("\n Dados do cliente alterados com sucesso!");
             system("pause>nul");
             system("cls || clear");
         }
     }
     if (!encontrado)
     {
-        fprintf(logFile,"Alteração do cliente falhou.\n");
+        fprintf(logFile,"\nAlteração do cliente falhou.\n");
         fclose(logFile);
 
         printf("\nCódigo não cadastrado!!\n");
@@ -306,8 +306,7 @@ void excluirClientes()
     fclose(clientef);
 }
 
-void consultarClientes()
-{
+void consultarClientes(){
     FILE *logFile;
     logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "rb");
@@ -319,15 +318,16 @@ void consultarClientes()
     }
     struct Clientes clientes;
     int cod, encontrado = 0;
-    printf("\nDigite o código que procura: \n");
+    printf("\nDigite o código que procura: ");
     scanf("%d", &cod);
 
     while (fread(&clientes, sizeof(clientes), 1, clientef))
     {
         if ((cod == clientes.codigo) && (clientes.deletado != '*'))
         {
-            printf("Cod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("\nCod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
             printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
+            printf("Nivel investidor: %s\n\n", clientes.nivel );
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
@@ -336,7 +336,7 @@ void consultarClientes()
         }
     }
     if (!encontrado)
-    {   fprintf(logFile,"Não foi possível consultar o cliente.\n");
+    {   fprintf(logFile,"\nNão foi possível consultar o cliente.\n");
         fclose(logFile);
         printf("\nCódigo não cadastrado!!\n");
         system("pause>nul");
@@ -344,3 +344,157 @@ void consultarClientes()
     }
     fclose(clientef);
 }
+
+void pergunta1() {
+    printf("\n\nCom quais produtos abaixo você tem familiaridade e/ou costuma investir com frequência?\n");
+    printf("(1) Nenhum.\n");
+    printf("(2) Renda Fixa(CDBs, Tesouro, Fundos de RF, etc).\n");
+    printf("(3) Renda Variável(Ações, Fiis, etc).\n");
+    printf("(4) Derivativos(Fundos, termos,etc).\n");
+    printf("Escolha: ");
+}
+
+void pergunta2() {
+    printf("\nQual percentual dos seus recursos você espera resgatar nos próximos 12 meses?\n");
+    printf("(1) Mais de 25%%.\n");
+    printf("(2) Entre 5%% e 25%%.\n");
+    printf("(3) Até 5%%.\n");
+    printf("(4) Não tenho expectivas de resgatar meus recursos nos próximos 12 meses.\n");
+    printf("Escolha: ");
+}
+
+void pergunta3() {
+    printf("\nPor quanto tempo você pretende manter seus recursos investidos?\n");
+    printf("(1) Até 1 ano.\n");
+    printf("(2) De 1 a 3 anos.\n");
+    printf("(3) De 3 a 5 anos\n");
+    printf("(4) Por mais de 5 anos.\n");
+    printf("Escolha: ");
+}
+
+void pergunta4() {
+    printf("Quais são os produtos que você investe e/ou investiu mais de 10%% de sua renda nos últimos 12 meses?\n");
+    printf("(1) Nenhum.\n");
+    printf("(2) Renda Fixa(CDBs, Teseuro, Fundos de RF, etc).\n");
+    printf("(3) Renda Variável(Acoes, Fiis, etc).\n");
+    printf("(4) Derivativos(Fundos, termos,etc).\n");
+    printf("Escolha: ");
+}
+
+void investidorNivel() {
+
+    FILE *logFile;
+    logFile=fopen("log.txt", "a");
+    clientef = fopen(arquivoc, "r+b");
+    if (clientef == NULL)
+    {
+        printf("Arquivo inexistente!");
+        system("pause>nul");
+        system("cls || clear");
+    }
+
+    struct Clientes clientes;
+    int cod, encontrado = 0;
+    printf("\nDigite o codigo que deseja alterar: ");
+    scanf("%d", &cod);
+
+    while (fread(&clientes, sizeof(clientes), 1, clientef))
+    {
+        if ((cod == clientes.codigo) && (clientes.deletado != '*'))
+        {
+            printf("\nCod %d - Nome: %-s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
+            encontrado = 1;
+
+            fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
+
+            fflush(stdin);
+            int qualnivel = 0, resultado = 0, cont;
+
+    for(cont = 1; cont <=4; cont++){
+        if(cont == 1) pergunta1();
+        if(cont == 2) pergunta2();
+        if(cont == 3) pergunta3();
+        if(cont == 4) pergunta4();
+        scanf("%d", &qualnivel);
+        system("cls");
+        logo();
+        switch (qualnivel) {
+
+            case 1:
+                resultado += 5;
+                break;
+
+             case 2:
+                resultado += 10;
+                break;
+
+             case 3:
+                resultado += 15;
+                break;
+
+             case 4:
+                resultado += 20;
+                break;
+
+
+        }
+
+
+
+    }
+
+
+    if(resultado <= 40){
+        printf("O nível de investimento do cliente é conservador ");
+        strcpy(clientes.nivel, "Conservador");
+        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo conservador.\n");
+        fclose(logFile);
+        getch();
+        menuClientes();
+
+    } else if(resultado <= 60){
+        printf("O nível de investimento do cliente é moderado ");
+        strcpy(clientes.nivel, "Moderado");
+        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo moderado.\n");
+        fclose(logFile);
+        getch();
+        menuClientes();
+
+    } else {
+        printf("O nível de investimento do cliente é agressivo ");
+        strcpy(clientes.nivel, "Agressivo");
+        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo agressivo.\n");
+        fclose(logFile);
+        getch();
+        menuClientes();
+
+    }
+
+            fprintf(logFile,"Nivel de investimento do cliente realizado.\n");
+            fclose(logFile);
+
+            system("pause>nul");
+            system("cls || clear");
+        }
+
+            fwrite(&clientes, sizeof(clientes), 1, clientef);
+            fseek(clientef, sizeof(clientes) * 0, SEEK_END);
+
+
+    }
+    if (!encontrado)
+    {
+        fprintf(logFile,"Nivel de investimento do cliente falhou.\n");
+        fclose(logFile);
+
+        printf("\nCodigo nao cadastrado!!\n");
+        system("pause>nul");
+        system("cls || clear");
+    }
+    fclose(clientef);
+
+
+
+
+}
+

@@ -13,7 +13,6 @@
 #include "loginAnalista.h"
 #include "menuPrincipal.h"
 #include "menuPrincipalAnalista.h"
-#include "investidorNivel.h"
 #include "menuAnalista.h"
 #include "cadastroAnalista.h"
 #include "menuClientes.h"

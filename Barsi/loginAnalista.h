@@ -13,6 +13,8 @@ typedef struct Analista{
 } analistas;
 
 void loginAnalista() {
+
+    setlocale(LC_ALL, "Portuguese");
     char arquivo[] = "analista.bin";
     analistas max[TAM];
     FILE *arq;

@@ -117,7 +117,7 @@ void cadastroAnalista()
         fclose (arq);
         fprintf(logFile,"O cadastro de analista foi realizado.\n");
         fclose(logFile);
-        printf("\n Os dados do produto foram incluídos com sucesso!");
+        printf("\n Os dados do analista foram incluídos com sucesso!");
         system("pause>nul");
         system("cls || clear");
     }
@@ -126,7 +126,7 @@ void cadastroAnalista()
         fclose (arq);
         fprintf(logFile,"Cadastro de analista falhou.\n");
         fclose(logFile);
-        printf("\n Falha ao gravar dados do produto.");
+        printf("\n Falha ao gravar dados do Analista.");
         system("pause>nul");
         system("cls || clear");
     }

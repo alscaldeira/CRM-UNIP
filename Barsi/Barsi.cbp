@@ -34,7 +34,6 @@
 		<Unit filename="cadastroAnalista.h" />
 		<Unit filename="cadastroClientes.h" />
 		<Unit filename="init.h" />
-		<Unit filename="investidorNivel.h" />
 		<Unit filename="login.h" />
 		<Unit filename="loginAnalista.h" />
 		<Unit filename="logo.h" />
