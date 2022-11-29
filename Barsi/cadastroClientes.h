@@ -45,7 +45,7 @@ void cadastroClientes(){
     printf("Nome: ");
     scanf("%[^\n]", clientes.nome);
     fflush(stdin);
-    printf("CPF: ");
+    printf("CPF (sem caracteres especiais): ");
     while(ctecla < 11){
 
         ch = getch();
