@@ -64,7 +64,6 @@ void menuClientes() {
 
             default:
                 errorsCount++;
-                opcaoInvalida(errorsCount);
                 break;
 
         }

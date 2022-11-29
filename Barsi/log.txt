@@ -614,3 +614,233 @@ Menu principal do analista aberto.
 Menu cliente aberto.
 Menu principal do analista aberto.
 Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo conservador.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Nivel de investimento do cliente falhou.
+Menu cliente aberto.
+Usuário digitou .
+O usuário digitou uma opção inválida pela 1º vez.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo conservador.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo conservador.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo conservador.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu analista aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo agressivo.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo agressivo.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+
+Não foi possível consultar o cliente.
+Cliente consultado.
+Cliente consultado.
+Cliente consultado.
+Cliente consultado.
+Cliente consultado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Usuário digitou .
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Usuário digitou .
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo moderado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.

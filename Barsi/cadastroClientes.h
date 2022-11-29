@@ -6,9 +6,9 @@
 #define TAM 100
 
 typedef struct Clientes{
-    int  codigo,numeroDependentes;
-    char profissao[35], nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
-    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30],deletado, nivel[30];
+    int codigo,numeroDependentes;
+    char nome[100], endereco[100], sexo[15], email[100], nacionalidade[20],
+    uf[2], nascimento[30], cidade[30], estCivil[15], cpf[30],deletado, nivelInvest[20];
 }clientes;
 
 char arquivoc[] = "clientes.bin";
@@ -213,15 +213,23 @@ void alterarClientes()
         if (cod == clientes.codigo)
         {
             printf("\nCod %d - Nome: %-s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
-            printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
+            printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
 
             fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
-            printf("\nDigite um novo estado civil: ");
+            printf("\nDigite um novo Email: ");
             fflush(stdin);
-            gets(clientes.estCivil);
-            printf("\nDigite o novo número de dependentes: ");
-            scanf("%d", &clientes.numeroDependentes);
+            gets(clientes.email);
+            printf("\nDigite uma nova cidade: ");
+            fflush(stdin);
+            gets(clientes.cidade);
+            printf("\nDigite uma nova UF: ");
+            fflush(stdin);
+            gets(clientes.uf);
+            printf("\nDigite um novo endereço: ");
+            fflush(stdin);
+            gets(clientes.endereco);
+
 
             fwrite(&clientes, sizeof(clientes), 1, clientef);
             fseek(clientef, sizeof(clientes) * 0, SEEK_END);
@@ -268,7 +276,7 @@ void excluirClientes()
         if (cod == clientes.codigo)
         {
             printf("Cod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
-            printf("Estado civil: %s - Número de dependentes: %d\n\n", clientes.estCivil, clientes.numeroDependentes );
+            printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
 
             printf("\nTem certeza que quer excluir este cliente? s/n \n");
@@ -326,8 +334,8 @@ void consultarClientes(){
         if ((cod == clientes.codigo) && (clientes.deletado != '*'))
         {
             printf("\nCod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
-            printf("Estado civil: %s - Número de dependentes: %d\n\n",clientes.estCivil, clientes.numeroDependentes );
-            printf("Nivel investidor: %s\n\n", clientes.nivel );
+            //printf("Nível do investidor: %s\n", clientes.nivelInvest);
+            printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
@@ -335,8 +343,8 @@ void consultarClientes(){
             fclose(logFile);
         }
     }
-    if (!encontrado)
-    {   fprintf(logFile,"\nNão foi possível consultar o cliente.\n");
+    if (!encontrado){
+        fprintf(logFile,"\nNão foi possível consultar o cliente.\n");
         fclose(logFile);
         printf("\nCódigo não cadastrado!!\n");
         system("pause>nul");
@@ -383,6 +391,8 @@ void pergunta4() {
 
 void investidorNivel() {
 
+    struct Clientes clientes;
+
     FILE *logFile;
     logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "r+b");
@@ -393,7 +403,6 @@ void investidorNivel() {
         system("cls || clear");
     }
 
-    struct Clientes clientes;
     int cod, encontrado = 0;
     printf("\nDigite o codigo que deseja alterar: ");
     scanf("%d", &cod);
@@ -410,65 +419,62 @@ void investidorNivel() {
             fflush(stdin);
             int qualnivel = 0, resultado = 0, cont;
 
-    for(cont = 1; cont <=4; cont++){
-        if(cont == 1) pergunta1();
-        if(cont == 2) pergunta2();
-        if(cont == 3) pergunta3();
-        if(cont == 4) pergunta4();
-        scanf("%d", &qualnivel);
-        system("cls");
-        logo();
-        switch (qualnivel) {
+            for(cont = 1; cont <=4; cont++){
+                if(cont == 1) pergunta1();
+                if(cont == 2) pergunta2();
+                if(cont == 3) pergunta3();
+                if(cont == 4) pergunta4();
+                scanf("%d", &qualnivel);
+                system("cls");
+                logo();
+                switch (qualnivel) {
 
-            case 1:
-                resultado += 5;
-                break;
+                    case 1:
+                        resultado += 5;
+                        break;
 
-             case 2:
-                resultado += 10;
-                break;
+                     case 2:
+                        resultado += 10;
+                        break;
 
-             case 3:
-                resultado += 15;
-                break;
+                     case 3:
+                        resultado += 15;
+                        break;
 
-             case 4:
-                resultado += 20;
-                break;
+                     case 4:
+                        resultado += 20;
+                        break;
+                }
+            }
 
+            if(resultado <= 40){
+                printf("O nível de investimento do cliente é conservador ");
+                strcpy(clientes.nivelInvest, "Conservador");
+                //printf("\nNivel investidor: %s \n", clientes.nivelInvest);
+                fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo conservador.\n");
+                fclose(logFile);
+                getch();
+                menuClientes();
 
-        }
+            } else if(resultado <= 60){
+                printf("O nível de investimento do cliente é moderado ");
+                strcpy(clientes.nivelInvest, "Moderado");
+                //printf("\nNivel investidor: %s \n", clientes.nivelInvest);
+                fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo moderado.\n");
+                fclose(logFile);
+                getch();
+                menuClientes();
 
+            } else {
+                printf("O nível de investimento do cliente é agressivo ");
+                strcpy(clientes.nivelInvest, "Agressivo");
+                //printf("\nNivel investidor: %s \n", clientes.nivelInvest);
+                fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo agressivo.\n");
+                fclose(logFile);
+                getch();
+                menuClientes();
 
-
-    }
-
-
-    if(resultado <= 40){
-        printf("O nível de investimento do cliente é conservador ");
-        strcpy(clientes.nivel, "Conservador");
-        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo conservador.\n");
-        fclose(logFile);
-        getch();
-        menuClientes();
-
-    } else if(resultado <= 60){
-        printf("O nível de investimento do cliente é moderado ");
-        strcpy(clientes.nivel, "Moderado");
-        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo moderado.\n");
-        fclose(logFile);
-        getch();
-        menuClientes();
-
-    } else {
-        printf("O nível de investimento do cliente é agressivo ");
-        strcpy(clientes.nivel, "Agressivo");
-        fprintf(logFile,"Perfil do cliente testado com sucesso, o mesmo sendo agressivo.\n");
-        fclose(logFile);
-        getch();
-        menuClientes();
-
-    }
+            }
 
             fprintf(logFile,"Nivel de investimento do cliente realizado.\n");
             fclose(logFile);
@@ -479,11 +485,8 @@ void investidorNivel() {
 
             fwrite(&clientes, sizeof(clientes), 1, clientef);
             fseek(clientef, sizeof(clientes) * 0, SEEK_END);
-
-
     }
-    if (!encontrado)
-    {
+    if (!encontrado){
         fprintf(logFile,"Nivel de investimento do cliente falhou.\n");
         fclose(logFile);
 
