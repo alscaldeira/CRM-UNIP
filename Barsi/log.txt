@@ -876,3 +876,90 @@ Não foi possível consultar o cliente.
 Menu cliente aberto.
 Menu principal aberto.
 Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Alteração do cliente realizada.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo conservador.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Alteração do cliente realizada.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Ocorreu a exclusão de um cliente.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Ocorreu a exclusão de um cliente.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Alteração do cliente realizada.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Perfil do cliente testado com sucesso, o mesmo sendo agressivo.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login recusado, pois o limite de tentativas foi excedido.
+Sistema encerrado.

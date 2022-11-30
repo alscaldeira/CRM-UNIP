@@ -88,13 +88,15 @@ void cadastroClientes(){
     printf("\nData de nascimento ex(24/09/2022): ");
     scanf("%[^\n]", clientes.nascimento);
 
-    //sexualidade
-    printf("\nSexo\n");
-    printf("1 -- Masculino\n");
-    printf("2 -- Feminino\n");
-    printf("3 -- Não definir\n");
-    printf("Digite uma opção válida: ");
-    scanf("%d", &op);
+    while(op < 1 || op > 3){
+        //sexualidade
+        printf("\nSexo\n");
+        printf("1 -- Masculino\n");
+        printf("2 -- Feminino\n");
+        printf("3 -- Não definir\n");
+        printf("Digite uma opção válida: ");
+        scanf("%d", &op);
+    }
 
     switch (op){
 
@@ -125,14 +127,16 @@ void cadastroClientes(){
     printf("\nEmail: ");
     scanf("%s", clientes.email);
 
-    //estado cívil
-    printf("\nEstado civil: \n");
-    printf("1 -- Casado/a\n");
-    printf("2 -- Solteiro/a\n");
-    printf("3 -- Uniao estável\n");
-    printf("4 -- Viúvo/a\n");
-    printf("Digite uma opção válida: ");
-    scanf("%d", &op2);
+    while(op2 < 1 || op2 > 4){
+        //estado cívil
+        printf("\nEstado civil: \n");
+        printf("1 -- Casado/a\n");
+        printf("2 -- Solteiro/a\n");
+        printf("3 -- Uniao estável\n");
+        printf("4 -- Viúvo/a\n");
+        printf("Digite uma opção válida: ");
+        scanf("%d", &op2);
+    }
 
     switch (op2){
     case 1:
@@ -154,11 +158,13 @@ void cadastroClientes(){
     }
 
 
-    printf("\nTem dependentes?\n");
-    printf("1 -- Sim\n");
-    printf("2 -- Não\n");
-    printf("Digite uma opção válida: ");
-    scanf("%d", &dependentes);
+    while(dependentes < 1 || dependentes > 2){
+        printf("\nTem dependentes?\n");
+        printf("1 -- Sim\n");
+        printf("2 -- Não\n");
+        printf("Digite uma opção válida: ");
+        scanf("%d", &dependentes);
+    }
 
     if (dependentes == 1){
         printf("Números de dependentes: ");
@@ -333,7 +339,7 @@ void consultarClientes(){
         {
             printf("\nCod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
             //printf("Nível do investidor: %s\n", clientes.nivelInvest);
-            printf("Email: %s \nCidade: %s \nUF: %s \nEndereço: %s\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
+            printf("Email: %s \nCidade: %s \nUF: %s \nEndereço: %s\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
