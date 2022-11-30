@@ -268,14 +268,14 @@ void excluirClientes()
     struct Clientes clientes;
     int cod, encontrado = 0;
     char certeza;
-    printf("\nDigite o código que deseja EXCLUIR: \n");
+    printf("\nDigite o código que deseja EXCLUIR: ");
     scanf("%d", &cod);
 
     while(fread(&clientes, sizeof(clientes), 1, clientef))
     {
         if (cod == clientes.codigo)
         {
-            printf("Cod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
+            printf("\nCod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
             printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
 
@@ -335,7 +335,7 @@ void consultarClientes(){
         {
             printf("\nCod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
             //printf("Nível do investidor: %s\n", clientes.nivelInvest);
-            printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
+            printf("Email: %s \nCidade: %s \nUF: %s \nEndereço: %s\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");

@@ -844,3 +844,35 @@ Cliente consultado.
 Menu cliente aberto.
 Menu principal aberto.
 Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Usuário digitou .
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Iniciou o cadastro do cliente.
+Cadastro de cliente realizado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Cliente consultado.
+Menu cliente aberto.
+Ocorreu a exclusão de um cliente.
+Menu cliente aberto.
+
+Não foi possível consultar o cliente.
+Menu cliente aberto.
+Menu principal aberto.
+Sistema encerrado.

@@ -155,7 +155,7 @@ void consultaAnalistas(){
             fprintf(logFile,"Analista consultado.\n");
             fclose(logFile);
 
-            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            printf("\nCódigo: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
             system("pause>nul");
             system("cls || clear");
@@ -194,7 +194,7 @@ void exclusaoAnalistas() {
     {
         if (cod == analistas.codigo)
         {
-            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            printf("\nCódigo: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
 
             printf("\nTem certeza que deseja excluir este analista? s/n \n");
@@ -254,7 +254,7 @@ void alteracaoAnalistas() {
     {
         if (cod == analistas.codigo)
         {
-            printf("Código: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
+            printf("\nCódigo: %d; Nome: %s; CPF: %.3s.***.***-**", analistas.codigo, analistas.nome, analistas.cpf);
             encontrado = 1;
 
             fseek(arq,sizeof(struct Analista)*-1, SEEK_CUR);
