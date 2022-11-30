@@ -191,8 +191,7 @@ void cadastroClientes(){
 
 
 }
-void alterarClientes()
-{
+void alterarClientes(){
     FILE *logFile;
     logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "r+b");
@@ -213,7 +212,7 @@ void alterarClientes()
         if (cod == clientes.codigo)
         {
             printf("\nCod %d - Nome: %-s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
-            printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
+            printf("Email: %s \nCidade: %s \nUF: %s \nEndereço: %s\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
 
             fseek(clientef, sizeof(struct Clientes) * -1, SEEK_CUR);
@@ -254,8 +253,7 @@ void alterarClientes()
     fclose(clientef);
 }
 
-void excluirClientes()
-{
+void excluirClientes(){
     FILE *logFile;
     logFile=fopen("log.txt", "a");
     clientef = fopen(arquivoc, "r+b");
@@ -276,7 +274,7 @@ void excluirClientes()
         if (cod == clientes.codigo)
         {
             printf("\nCod %d - Nome: %-15s - CPF %.3s.***.***-**\n", clientes.codigo, clientes.nome, clientes.cpf);
-            printf("Email: %s \nCidade: %s UF: %s Endereço\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
+            printf("Email: %s \nCidade: %s \nUF: %s \nEndereço: %s\n\n",clientes.email, clientes.cidade, clientes.uf, clientes.endereco);
             encontrado = 1;
 
             printf("\nTem certeza que quer excluir este cliente? s/n \n");
