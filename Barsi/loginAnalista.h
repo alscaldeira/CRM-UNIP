@@ -47,7 +47,7 @@ void loginAnalista() {
         }
         struct Analista analistas;
         int cod, encontrado = 0;
-        printf ("\nCódigo do Analista: ");
+        printf ("\nChave de acesso: ");
         scanf ("%d", &cod);
 
         while (fread (&analistas, sizeof(analistas), 1, arq))
@@ -59,7 +59,7 @@ void loginAnalista() {
         }
         if (!encontrado)
         {
-            printf("\nCódigo não cadastrado!!\n");
+            printf("\nChave de acesso não cadastrado!!\n");
             system("pause>nul");
             system("cls || clear");
         }

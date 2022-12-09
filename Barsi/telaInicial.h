@@ -1,4 +1,3 @@
-
 void telaInicial() {
     int saida, cont;
     for(cont = 1; cont <= 3; cont++) {
@@ -14,11 +13,11 @@ void telaInicial() {
         scanf("%d", &saida);
         printf("------------------------------------------------------\n");
 
-        if(saida >= 0 || saida <= 2) {
+        if(saida >= 0 && saida <= 2) {
             break;
         } else {
             printf("Opção inválida, por favor digite uma opção válida!\n\n\n");
-            system("pause");
+            getch();
         }
 
     }
