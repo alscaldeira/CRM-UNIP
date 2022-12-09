@@ -113,3 +113,6 @@ Sistema encerrado.
 Login realizado com sucesso por Barsi.
 Menu principal aberto.
 Sistema encerrado.
+Login realizado com sucesso por Barsi.
+Menu principal aberto.
+Sistema encerrado.

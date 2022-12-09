@@ -26,7 +26,7 @@ void cadastroAnalista()
     logFile=fopen("log.txt", "a");
     fprintf(logFile,"Iniciou o cadastro do analista.\n");
 
-    printf("Digite o código do analista: ");
+    printf("Digite a chave de acesso: ");
     scanf("%d", &analistas.codigo);
     printf("Digite o nome do analista: ");
     fflush(stdin);
